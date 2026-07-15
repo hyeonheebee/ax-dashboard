@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T17:00:34.000535+09:00",
+  "generated_at": "2026-07-15T10:15:42.131675+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -26,16 +26,16 @@
       "key": "accounting",
       "priority": "High",
       "status": "🟡 진행중",
-      "stage": "구현(라이브 검증)",
-      "headline": "마지막 확인 1건을 담당자 실행 결과 기다리는 중 — 우리 쪽 준비·점검은 전부 통과",
-      "flow": "v9 전달·타이밍 규명(7/11) → 실행결과 대기 + 사전점검 전부 통과(7/13)",
-      "watch": "담당자가 v9를 1회 실행해 콘솔 전문을 보내주는 것이 유일한 대기점. 결과가 오면 즉시 성공/수정 판정 가능.",
+      "stage": "재설계안 검증",
+      "headline": "새 실행 계획서를 그동안 확인된 사실과 전부 대조 — 뼈대는 합격, 이미 알아낸 정보를 다시 알아내려는 낭비 8건을 찾아 고치기로",
+      "flow": "전면 재설계 계획서 작성(7/13~14) → 계획서를 기존 확인 사실과 전수 대조 검증(7/14)",
+      "watch": "계획서에 적힌 '전체 364건'이라는 숫자의 출처 확인 필요(기록에 근거 없음) — 담당자 확인값인지 결정해야 개정 진행 가능",
       "purpose": "SRnD(연구비) 지급신청 → 서울시 민간위탁 통합지출결의서 자동 전기",
       "progress": "probe 2개 실측으로 확증: 팝업 열기용 데이터(ds_popup)는 결의서 생성 화면에서만 생성되고, 추출 대상 데이터(352건)는 두 화면 공통. 수정 1커밋(실행 전 사전점검·팝업 닫기 강화·안내 갱신), 목업 3케이스·제어흐름 8/8·회귀 전부 green. 코드 5커밋(기준선 2b087c7), 담당자 전달물 zip 준비 완료(미전달)",
-      "next": "담당자 v9 실행 결과(콘솔 전문) 회수 → 판정표로 판정 → 성공 시 전체 364건 실행",
+      "next": "검증 결과 3가지(확정 정보 반영·근거 없는 확신 1건 철회·완료 기준 교체)를 계획서 1.1판에 반영",
       "decision": "Yes",
       "risk": "WebSquare 폼 모델 미반영·오집행 → 금액 일치 가드 필수, 🛑돈 집행은 사람",
-      "updated": "260713",
+      "updated": "260714",
       "meeting": "260602·260623 함교수님 미팅",
       "deliverable": "automation 코드(CDP Attach 전환), 확인된사실_정본.md, 담당자 전달물(zip+안내 HTML)",
       "page_url": "https://app.notion.com/p/AX-387341d36ec480cfb04ad27420daab64",
@@ -577,6 +577,39 @@
       "reactions_total": 40,
       "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
       "last_text": ":+1:"
+    },
+    {
+      "date": "2026-07-15",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 12,
+      "posts_today": 0,
+      "replies_total": 6,
+      "reactions_total": 100,
+      "top_emojis": "gratitude-gamsahamnida×14, 매기필승×14, +1×12",
+      "last_text": "*[행사공유 - 현희 PICK~* :meow_party:*]* 1. *아산 유스프러너 데모데이 (7/21)* <https://event-us.kr/asannanum/event/128669|2026 아산 유스프러너 데…"
+    },
+    {
+      "date": "2026-07-15",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 14,
+      "posts_today": 0,
+      "replies_total": 9,
+      "reactions_total": 83,
+      "top_emojis": "매기필승×16, gratitude-gamsahamnida×11, +1×11",
+      "last_text": "*[Tips] - 고사양 모델(Fable 5·Sol) 프롬프팅* 이번주 <#C0B892PFH0A> 채널에서 공유드린 바와 같이, *Anthropic 이 _Fable 5 구독 포함(무료) 기간을 7/19까지 재연장_했…"
+    },
+    {
+      "date": "2026-07-15",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 3,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 40,
+      "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
+      "last_text": ":+1:"
     }
   ],
   "project_history": {
@@ -1052,6 +1085,38 @@
           "status": "🟡 진행중",
           "stage": "구현(라이브 검증)",
           "updated": "260713"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-15": {
+      "counts": {
+        "🟡 진행중": 3,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟡 진행중",
+          "stage": "피드백 채널 — 버그 2건 해소, 최종 동작 테스트 1건 대기",
+          "updated": "260710"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 검증",
+          "updated": "260714"
         },
         {
           "name": "[AX] 내부 AI 전환 / 리터러시 증진",
