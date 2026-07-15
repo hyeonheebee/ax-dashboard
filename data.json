@@ -1,0 +1,1071 @@
+{
+  "generated_at": "2026-07-14T17:00:34.000535+09:00",
+  "projects": [
+    {
+      "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+      "key": "gcb",
+      "priority": "High",
+      "status": "🟡 진행중",
+      "stage": "피드백 채널 — 버그 2건 해소, 최종 동작 테스트 1건 대기",
+      "headline": "피드백 채널 무반응의 원인 2개(슬랙 설정+코드 결함)를 모두 잡음 — 채널에 테스트 글 1개만 올려 확인하면 가동",
+      "flow": "채널 핸들러 구현·배포 → 무반응 → 1차: 이벤트 구독 재설치(심현희) → 여전히 무반응 → 심현희 '코드부터 확인해' → Bolt 리스너 이중등록 버그 확정·수정·재배포",
+      "watch": "최종 테스트('봇 테스트 4') 미확인 상태로 세션 종료 / 신규 규정 13종 PDF 도착(미착수) — 2026 관리지침 판올림이 기존 REG 15카드와 충돌 가능",
+      "purpose": "사내 업무지침을 Slack에서 질의·검수",
+      "progress": "VPS 서버에서 24/7 라이브 가동 중. 온보딩 21카드 + 전자서명 가이드 4카드 반영(총 118카드), 재인덱싱 후 신규 질의 7/7 적중·기존 정확도 88% 유지(무회귀). 봇 답변에 자료 바로가기 링크 자동 첨부. 서버 반영 시 재인덱싱 필수(json만 올리면 벡터검색 꺼짐)",
+      "next": "채널 테스트 확인 → 수집 가동 확인 → 신규 13종 발췌 파이프라인(판올림 대조 선행)",
+      "decision": "No",
+      "risk": "원문 Anthropic 전송=보안(확장 시), 할루시네이션, 비용",
+      "updated": "260710",
+      "meeting": "260623 함교수님 미팅",
+      "deliverable": "봇(.py) 운영본, bot_guidelines.json(90), 평가셋, 사용로그",
+      "page_url": "https://app.notion.com/p/AX-Guide-Check-373341d36ec4808e81f5d39d0dfdb10f",
+      "owner": "Claude"
+    },
+    {
+      "name": "[AX] 회계 관리 시스템 연동",
+      "key": "accounting",
+      "priority": "High",
+      "status": "🟡 진행중",
+      "stage": "구현(라이브 검증)",
+      "headline": "마지막 확인 1건을 담당자 실행 결과 기다리는 중 — 우리 쪽 준비·점검은 전부 통과",
+      "flow": "v9 전달·타이밍 규명(7/11) → 실행결과 대기 + 사전점검 전부 통과(7/13)",
+      "watch": "담당자가 v9를 1회 실행해 콘솔 전문을 보내주는 것이 유일한 대기점. 결과가 오면 즉시 성공/수정 판정 가능.",
+      "purpose": "SRnD(연구비) 지급신청 → 서울시 민간위탁 통합지출결의서 자동 전기",
+      "progress": "probe 2개 실측으로 확증: 팝업 열기용 데이터(ds_popup)는 결의서 생성 화면에서만 생성되고, 추출 대상 데이터(352건)는 두 화면 공통. 수정 1커밋(실행 전 사전점검·팝업 닫기 강화·안내 갱신), 목업 3케이스·제어흐름 8/8·회귀 전부 green. 코드 5커밋(기준선 2b087c7), 담당자 전달물 zip 준비 완료(미전달)",
+      "next": "담당자 v9 실행 결과(콘솔 전문) 회수 → 판정표로 판정 → 성공 시 전체 364건 실행",
+      "decision": "Yes",
+      "risk": "WebSquare 폼 모델 미반영·오집행 → 금액 일치 가드 필수, 🛑돈 집행은 사람",
+      "updated": "260713",
+      "meeting": "260602·260623 함교수님 미팅",
+      "deliverable": "automation 코드(CDP Attach 전환), 확인된사실_정본.md, 담당자 전달물(zip+안내 HTML)",
+      "page_url": "https://app.notion.com/p/AX-387341d36ec480cfb04ad27420daab64",
+      "owner": "Claude"
+    },
+    {
+      "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+      "key": "literacy",
+      "priority": "Mid",
+      "status": "🟡 진행중",
+      "stage": "세션 운영 시작",
+      "headline": "AI 활용 교육 시작 — GPT·Claude 팁 세션 #1 진행(07-01)",
+      "flow": "도구 GPT 확정 → 세션 #1(GPT·Claude 활용 팁) 진행·후기 수집 → 세션 #2 기획",
+      "watch": "세션 지속·참여율과 실제 업무 적용이 관건",
+      "purpose": "구성원 AI 활용 역량 강화",
+      "progress": "교육 도구 GPT 확정. 세션 #1(GPT·Claude 활용 팁, 07-01) 진행 완료 — 현장 후기 수집(전반 긍정, 실제 활용사례 공유·타임대 다양화 제안). 아이디어 노션+가이드 v0.1 병행. 정기회의 금16시",
+      "next": "후기 반영 세션 #2 주제 기획 / AX 가이드 v0.1(M/O/D, 툴=GPT) 초안",
+      "decision": "Yes",
+      "risk": "참여율·실무 적용성",
+      "updated": "260701",
+      "meeting": "260623 함교수님 미팅",
+      "deliverable": "AX 가이드 v0.1(툴=GPT), 세션 설계안",
+      "page_url": "https://app.notion.com/p/AX-AI-376341d36ec480f8addbcd0bafbe8ed3",
+      "owner": "수기"
+    },
+    {
+      "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+      "key": "attendance",
+      "priority": "High",
+      "status": "🟢 사실상 완료",
+      "stage": "운영 검증 완료",
+      "headline": "신청~입·퇴실·만족도 전 과정 자동화, 실배포 검증 완료",
+      "flow": "전 구간 자동화·실배포 검증 → 이지나 팀장 확인 완료 → 실무자 니즈 UX 개선 단계",
+      "watch": "실무자(팀장님) 니즈 기반 UX 개선이 다음 핵심 (메일 한도는 부차 모니터링)",
+      "purpose": "행사 입·퇴실·만족도 셀프 관리 자동화",
+      "progress": "전 구간 실배포 검증 완료(신청→명단→메일→셀프 입·퇴실·만족도→폰 QR). 버그 10건 해결. 이지나 팀장 확인 완료 → 실무자 니즈에 맞춘 UX 개선 필요",
+      "next": "실무자(팀장님) 니즈 기반 UX 개선 / (부차) 메일 한도·QR 외부의존 점검",
+      "decision": "No",
+      "risk": "(부차) 메일 발송 한도, QR 외부 API 의존",
+      "updated": "260630",
+      "meeting": "-",
+      "deliverable": "admin.html / checkin.html / Apps Script, 사용가이드, 커밋 2535efa",
+      "page_url": "https://app.notion.com/p/AX-380341d36ec480d0bf8afd0394ca775f",
+      "owner": "Claude"
+    }
+  ],
+  "channel_history": [
+    {
+      "date": "2026-06-30",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 3,
+      "posts_today": 0,
+      "replies_total": 0,
+      "reactions_total": 15,
+      "top_emojis": "매기필승×4, kirby_dance×4, meow_party×3",
+      "last_text": "*[0629 오늘의 뉴스 - 현희 PICK~* :meow_party:*]* 저의 :heart_hands:*사적인 인사이트* 도 포함되어있습니다. 많은 논의 대환영! *0. 앤트로픽 'Claude Tag' 출시 — S…"
+    },
+    {
+      "date": "2026-06-30",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 3,
+      "posts_today": 0,
+      "replies_total": 2,
+      "reactions_total": 9,
+      "top_emojis": "매기필승×4, gratitude-gamsahamnida×2, 넵pink×1",
+      "last_text": "*[공유/정보]* :robot_face: *[AI Summit Seoul &amp; EXPO 2026] EXPO 무료 사전등록* :robot_face: *(~6/30 화)* 올해로 9주년을 맞는 국내 최대 글로벌 A…"
+    },
+    {
+      "date": "2026-06-30",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 1,
+      "posts_today": 0,
+      "replies_total": 0,
+      "reactions_total": 12,
+      "top_emojis": "+1×5, party-blob×3, android×3",
+      "last_text": "<!channel> :robot_face: *Guide Check Bot이 서울 AI 허브 안내 에이전트가 된다면?* 무엇이든 물어보면 답해주는 봇을 목표로, 답변에 들어갈 내용을 먼저 확인해보려고 해요. _*\"이건…"
+    },
+    {
+      "date": "2026-07-01",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 5,
+      "posts_today": 2,
+      "replies_total": 0,
+      "reactions_total": 31,
+      "top_emojis": "매기필승×4, kirby_dance×4, eyes×3",
+      "last_text": "좋은 정보 고맙습니다.! 현희님 노력이 결실을 맺을 수 있도록 잘 따라 가겠습니다. 잘 부탁합니다.:+1:"
+    },
+    {
+      "date": "2026-07-01",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 4,
+      "posts_today": 1,
+      "replies_total": 4,
+      "reactions_total": 14,
+      "top_emojis": "gratitude-gamsahamnida×4, 매기필승×4, froge-pray×3",
+      "last_text": "*[26.07.01] 세션 #1 - GPT, Claude 활용 팁* 2026-07-01 (화) / 심현희 / #AX세션 #GPT #Claude #Cowork #Codex #데스크톱앱 #활용사례 *목차* • *주제 1…"
+    },
+    {
+      "date": "2026-07-01",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 1,
+      "posts_today": 0,
+      "replies_total": 0,
+      "reactions_total": 12,
+      "top_emojis": "+1×5, party-blob×3, android×3",
+      "last_text": "<!channel> :robot_face: *Guide Check Bot이 서울 AI 허브 안내 에이전트가 된다면?* 무엇이든 물어보면 답해주는 봇을 목표로, 답변에 들어갈 내용을 먼저 확인해보려고 해요. _*\"이건…"
+    },
+    {
+      "date": "2026-07-02",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 5,
+      "posts_today": 0,
+      "replies_total": 0,
+      "reactions_total": 31,
+      "top_emojis": "매기필승×4, kirby_dance×4, eyes×3",
+      "last_text": "좋은 정보 고맙습니다.! 현희님 노력이 결실을 맺을 수 있도록 잘 따라 가겠습니다. 잘 부탁합니다.:+1:"
+    },
+    {
+      "date": "2026-07-02",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 5,
+      "posts_today": 1,
+      "replies_total": 5,
+      "reactions_total": 22,
+      "top_emojis": "매기필승×5, gratitude-gamsahamnida×4, froge-pray×3",
+      "last_text": "*[Tips] - Claude Fable 5 프롬프팅 (무료 체험 프로모션 (~7/7))* *Claude의 가장 강력한 모델인 Fable5가 다시 오픈되었습니다* (7.1일부로 수출금지 규정 해재 후 재배포) Fab…"
+    },
+    {
+      "date": "2026-07-02",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 1,
+      "posts_today": 0,
+      "replies_total": 0,
+      "reactions_total": 12,
+      "top_emojis": "+1×5, party-blob×3, android×3",
+      "last_text": "<!channel> :robot_face: *Guide Check Bot이 서울 AI 허브 안내 에이전트가 된다면?* 무엇이든 물어보면 답해주는 봇을 목표로, 답변에 들어갈 내용을 먼저 확인해보려고 해요. _*\"이건…"
+    },
+    {
+      "date": "2026-07-03",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 5,
+      "posts_today": 0,
+      "replies_total": 0,
+      "reactions_total": 31,
+      "top_emojis": "매기필승×4, kirby_dance×4, eyes×3",
+      "last_text": "좋은 정보 고맙습니다.! 현희님 노력이 결실을 맺을 수 있도록 잘 따라 가겠습니다. 잘 부탁합니다.:+1:"
+    },
+    {
+      "date": "2026-07-03",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 5,
+      "posts_today": 0,
+      "replies_total": 5,
+      "reactions_total": 22,
+      "top_emojis": "매기필승×5, gratitude-gamsahamnida×4, froge-pray×3",
+      "last_text": "*[Tips] - Claude Fable 5 프롬프팅 (무료 체험 프로모션 (~7/7))* *Claude의 가장 강력한 모델인 Fable5가 다시 오픈되었습니다* (7.1일부로 수출금지 규정 해재 후 재배포) Fab…"
+    },
+    {
+      "date": "2026-07-03",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 2,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 32,
+      "top_emojis": "+1×6, gratitude-gamsahamnida×4, meow_party×4",
+      "last_text": "우리 근무 규정 및 업무규정 그리고 노트북 LM에 들어 있는 서울시 서울대 허브 규정 및 하도급법등등 다 사용 하여 리스크 없애고 신속하게 편리하게 일 할 수 있는 AI로 발전해가면 좋겠습니다."
+    },
+    {
+      "date": "2026-07-04",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 6,
+      "posts_today": 0,
+      "replies_total": 0,
+      "reactions_total": 45,
+      "top_emojis": "eyes×4, coffee_parrot×4, android×4",
+      "last_text": "<https://skillathon-lp-next.vercel.app/|https://skillathon-lp-next.vercel.app/> 재미있어보이는 워크숍이에요 제가 듣고싶은데 그날 일정이 안되어 공유합니다…"
+    },
+    {
+      "date": "2026-07-04",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 5,
+      "posts_today": 0,
+      "replies_total": 5,
+      "reactions_total": 22,
+      "top_emojis": "매기필승×5, gratitude-gamsahamnida×4, froge-pray×3",
+      "last_text": "*[Tips] - Claude Fable 5 프롬프팅 (무료 체험 프로모션 (~7/7))* *Claude의 가장 강력한 모델인 Fable5가 다시 오픈되었습니다* (7.1일부로 수출금지 규정 해재 후 재배포) Fab…"
+    },
+    {
+      "date": "2026-07-04",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 2,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 32,
+      "top_emojis": "+1×6, gratitude-gamsahamnida×4, meow_party×4",
+      "last_text": "우리 근무 규정 및 업무규정 그리고 노트북 LM에 들어 있는 서울시 서울대 허브 규정 및 하도급법등등 다 사용 하여 리스크 없애고 신속하게 편리하게 일 할 수 있는 AI로 발전해가면 좋겠습니다."
+    },
+    {
+      "date": "2026-07-05",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 6,
+      "posts_today": 0,
+      "replies_total": 0,
+      "reactions_total": 46,
+      "top_emojis": "매기필승×5, eyes×4, coffee_parrot×4",
+      "last_text": "<https://skillathon-lp-next.vercel.app/|https://skillathon-lp-next.vercel.app/> 재미있어보이는 워크숍이에요 제가 듣고싶은데 그날 일정이 안되어 공유합니다…"
+    },
+    {
+      "date": "2026-07-05",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 5,
+      "posts_today": 0,
+      "replies_total": 5,
+      "reactions_total": 22,
+      "top_emojis": "매기필승×5, gratitude-gamsahamnida×4, froge-pray×3",
+      "last_text": "*[Tips] - Claude Fable 5 프롬프팅 (무료 체험 프로모션 (~7/7))* *Claude의 가장 강력한 모델인 Fable5가 다시 오픈되었습니다* (7.1일부로 수출금지 규정 해재 후 재배포) Fab…"
+    },
+    {
+      "date": "2026-07-05",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 2,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 32,
+      "top_emojis": "+1×6, gratitude-gamsahamnida×4, meow_party×4",
+      "last_text": "우리 근무 규정 및 업무규정 그리고 노트북 LM에 들어 있는 서울시 서울대 허브 규정 및 하도급법등등 다 사용 하여 리스크 없애고 신속하게 편리하게 일 할 수 있는 AI로 발전해가면 좋겠습니다."
+    },
+    {
+      "date": "2026-07-06",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 7,
+      "posts_today": 1,
+      "replies_total": 5,
+      "reactions_total": 61,
+      "top_emojis": "+1×7, 매기필승×7, gratitude-gamsahamnida×6",
+      "last_text": "[:date: *서울 AI 허브 | ICML 2026 주간 밋업 큐레이션 (7/6~7/22)]* 이번 주부터 ICML Seoul 주간이 시작되는데요, 아쉽게 ICML에 참석하지 못하시는 분들이나, 더 깊이 있는 네트…"
+    },
+    {
+      "date": "2026-07-06",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 7,
+      "posts_today": 2,
+      "replies_total": 5,
+      "reactions_total": 37,
+      "top_emojis": "gratitude-gamsahamnida×7, +1×6, 매기필승×6",
+      "last_text": "잘 참고하여 사용해 보겠습니다.! 고맙습니다."
+    },
+    {
+      "date": "2026-07-06",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 2,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 32,
+      "top_emojis": "+1×6, gratitude-gamsahamnida×4, meow_party×4",
+      "last_text": "우리 근무 규정 및 업무규정 그리고 노트북 LM에 들어 있는 서울시 서울대 허브 규정 및 하도급법등등 다 사용 하여 리스크 없애고 신속하게 편리하게 일 할 수 있는 AI로 발전해가면 좋겠습니다."
+    },
+    {
+      "date": "2026-07-07",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 7,
+      "posts_today": 0,
+      "replies_total": 6,
+      "reactions_total": 61,
+      "top_emojis": "+1×7, 매기필승×7, gratitude-gamsahamnida×6",
+      "last_text": "[:date: *서울 AI 허브 | ICML 2026 주간 밋업 큐레이션 (7/6~7/22)]* 이번 주부터 ICML Seoul 주간이 시작되는데요, 아쉽게 ICML에 참석하지 못하시는 분들이나, 더 깊이 있는 네트…"
+    },
+    {
+      "date": "2026-07-07",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 9,
+      "posts_today": 2,
+      "replies_total": 6,
+      "reactions_total": 48,
+      "top_emojis": "매기필승×12, +1×8, gratitude-gamsahamnida×7",
+      "last_text": "<!channel> 혹시 GPT, Claude 와 외부 MCP(특히 구글계정과 관련된) 나 구글드라이브 등과 연동이 잘 안되시는 분들은 보안 및 로그인에서 조직 2단계 인증을 사용설정하고 다시 시도해보세요! :meo…"
+    },
+    {
+      "date": "2026-07-07",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 3,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 40,
+      "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
+      "last_text": ":+1:"
+    },
+    {
+      "date": "2026-07-08",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 7,
+      "posts_today": 0,
+      "replies_total": 6,
+      "reactions_total": 61,
+      "top_emojis": "+1×7, 매기필승×7, gratitude-gamsahamnida×6",
+      "last_text": "[:date: *서울 AI 허브 | ICML 2026 주간 밋업 큐레이션 (7/6~7/22)]* 이번 주부터 ICML Seoul 주간이 시작되는데요, 아쉽게 ICML에 참석하지 못하시는 분들이나, 더 깊이 있는 네트…"
+    },
+    {
+      "date": "2026-07-08",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 11,
+      "posts_today": 2,
+      "replies_total": 7,
+      "reactions_total": 71,
+      "top_emojis": "매기필승×16, +1×11, gratitude-gamsahamnida×7",
+      "last_text": "*[TIPS - 토큰과 세션의 개념, 내 통장이 텅장되지 않는 꿀팁]* :shut-up-take-my-money: _토큰을 다 써서 세션이 멈춥니다..혹은 컨텍스트가 꽉차서 대답이 오염되었다는 말을 들어보셨나요?_ …"
+    },
+    {
+      "date": "2026-07-08",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 3,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 40,
+      "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
+      "last_text": ":+1:"
+    },
+    {
+      "date": "2026-07-09",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 8,
+      "posts_today": 1,
+      "replies_total": 6,
+      "reactions_total": 68,
+      "top_emojis": "+1×10, 매기필승×9, gratitude-gamsahamnida×8",
+      "last_text": "*[최근 뉴스 - 현희 PICK~* :meow_party:*]* &gt; _*1. 클로드 코워크Cowork, 모바일·웹으로 확장*_ :iphone: &gt; *_주요 내용_: 코워크Cowork가 모바일·웹으로 확장돼…"
+    },
+    {
+      "date": "2026-07-09",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 13,
+      "posts_today": 1,
+      "replies_total": 8,
+      "reactions_total": 79,
+      "top_emojis": "매기필승×16, +1×11, gratitude-gamsahamnida×10",
+      "last_text": "*[TIPS - Claude Code 모델 고르기]* • 보통 계획에는 고급 모델(Opus 4.8 등) 을, 계획 후 실제 코드, 작업 착수에는 조금 더 저렴한 모델(Sonnet) 을 사용합니다. • 아주 간단한 작…"
+    },
+    {
+      "date": "2026-07-09",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 3,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 40,
+      "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
+      "last_text": ":+1:"
+    },
+    {
+      "date": "2026-07-10",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 8,
+      "posts_today": 0,
+      "replies_total": 6,
+      "reactions_total": 68,
+      "top_emojis": "+1×10, 매기필승×9, gratitude-gamsahamnida×8",
+      "last_text": "*[최근 뉴스 - 현희 PICK~* :meow_party:*]* &gt; _*1. 클로드 코워크Cowork, 모바일·웹으로 확장*_ :iphone: &gt; *_주요 내용_: 코워크Cowork가 모바일·웹으로 확장돼…"
+    },
+    {
+      "date": "2026-07-10",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 13,
+      "posts_today": 0,
+      "replies_total": 8,
+      "reactions_total": 79,
+      "top_emojis": "매기필승×16, +1×11, gratitude-gamsahamnida×10",
+      "last_text": "*[TIPS - Claude Code 모델 고르기]* • 보통 계획에는 고급 모델(Opus 4.8 등) 을, 계획 후 실제 코드, 작업 착수에는 조금 더 저렴한 모델(Sonnet) 을 사용합니다. • 아주 간단한 작…"
+    },
+    {
+      "date": "2026-07-10",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 3,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 40,
+      "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
+      "last_text": ":+1:"
+    },
+    {
+      "date": "2026-07-11",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 8,
+      "posts_today": 0,
+      "replies_total": 6,
+      "reactions_total": 68,
+      "top_emojis": "+1×10, 매기필승×9, gratitude-gamsahamnida×8",
+      "last_text": "*[최근 뉴스 - 현희 PICK~* :meow_party:*]* &gt; _*1. 클로드 코워크Cowork, 모바일·웹으로 확장*_ :iphone: &gt; *_주요 내용_: 코워크Cowork가 모바일·웹으로 확장돼…"
+    },
+    {
+      "date": "2026-07-11",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 13,
+      "posts_today": 0,
+      "replies_total": 8,
+      "reactions_total": 79,
+      "top_emojis": "매기필승×16, +1×11, gratitude-gamsahamnida×10",
+      "last_text": "*[TIPS - Claude Code 모델 고르기]* • 보통 계획에는 고급 모델(Opus 4.8 등) 을, 계획 후 실제 코드, 작업 착수에는 조금 더 저렴한 모델(Sonnet) 을 사용합니다. • 아주 간단한 작…"
+    },
+    {
+      "date": "2026-07-11",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 3,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 40,
+      "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
+      "last_text": ":+1:"
+    },
+    {
+      "date": "2026-07-12",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 8,
+      "posts_today": 0,
+      "replies_total": 6,
+      "reactions_total": 68,
+      "top_emojis": "+1×10, 매기필승×9, gratitude-gamsahamnida×8",
+      "last_text": "*[최근 뉴스 - 현희 PICK~* :meow_party:*]* &gt; _*1. 클로드 코워크Cowork, 모바일·웹으로 확장*_ :iphone: &gt; *_주요 내용_: 코워크Cowork가 모바일·웹으로 확장돼…"
+    },
+    {
+      "date": "2026-07-12",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 13,
+      "posts_today": 0,
+      "replies_total": 8,
+      "reactions_total": 79,
+      "top_emojis": "매기필승×16, +1×11, gratitude-gamsahamnida×10",
+      "last_text": "*[TIPS - Claude Code 모델 고르기]* • 보통 계획에는 고급 모델(Opus 4.8 등) 을, 계획 후 실제 코드, 작업 착수에는 조금 더 저렴한 모델(Sonnet) 을 사용합니다. • 아주 간단한 작…"
+    },
+    {
+      "date": "2026-07-12",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 3,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 40,
+      "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
+      "last_text": ":+1:"
+    },
+    {
+      "date": "2026-07-13",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 11,
+      "posts_today": 3,
+      "replies_total": 6,
+      "reactions_total": 75,
+      "top_emojis": "매기필승×11, +1×10, gratitude-gamsahamnida×8",
+      "last_text": "좋은 정보 고맙습니다."
+    },
+    {
+      "date": "2026-07-13",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 14,
+      "posts_today": 1,
+      "replies_total": 9,
+      "reactions_total": 83,
+      "top_emojis": "매기필승×16, gratitude-gamsahamnida×11, +1×11",
+      "last_text": "*[Tips] - 고사양 모델(Fable 5·Sol) 프롬프팅* 이번주 <#C0B892PFH0A> 채널에서 공유드린 바와 같이, *Anthropic 이 _Fable 5 구독 포함(무료) 기간을 7/19까지 재연장_했…"
+    },
+    {
+      "date": "2026-07-13",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 3,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 40,
+      "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
+      "last_text": ":+1:"
+    },
+    {
+      "date": "2026-07-14",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 12,
+      "posts_today": 1,
+      "replies_total": 6,
+      "reactions_total": 100,
+      "top_emojis": "gratitude-gamsahamnida×14, 매기필승×14, +1×12",
+      "last_text": "*[행사공유 - 현희 PICK~* :meow_party:*]* 1. *아산 유스프러너 데모데이 (7/21)* <https://event-us.kr/asannanum/event/128669|2026 아산 유스프러너 데…"
+    },
+    {
+      "date": "2026-07-14",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 14,
+      "posts_today": 0,
+      "replies_total": 9,
+      "reactions_total": 83,
+      "top_emojis": "매기필승×16, gratitude-gamsahamnida×11, +1×11",
+      "last_text": "*[Tips] - 고사양 모델(Fable 5·Sol) 프롬프팅* 이번주 <#C0B892PFH0A> 채널에서 공유드린 바와 같이, *Anthropic 이 _Fable 5 구독 포함(무료) 기간을 7/19까지 재연장_했…"
+    },
+    {
+      "date": "2026-07-14",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 3,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 40,
+      "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
+      "last_text": ":+1:"
+    }
+  ],
+  "project_history": {
+    "2026-06-30": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 1,
+        "🟡 기획": 1,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "운영(파일럿)·고도화",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "구현(TEST B · CDP Attach)",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 기획",
+          "stage": "기획",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-01": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "운영(파일럿)·고도화",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "구현(TEST B 라이브 검증)",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-02": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "운영(파일럿)·고도화",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "구현(TEST B 라이브 검증)",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-03": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "운영(파일럿)·고도화",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "구현(TEST B 라이브 검증)",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-04": {
+      "counts": {
+        "🟡 진행중": 3,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟡 진행중",
+          "stage": "PHASE2 데이터 준비",
+          "updated": "260703"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "구현(TEST B 라이브 검증)",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-05": {
+      "counts": {
+        "🟡 진행중": 3,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟡 진행중",
+          "stage": "PHASE2 데이터 준비",
+          "updated": "260703"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "구현(TEST B 라이브 검증)",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-06": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "VPS 라이브 운영(24/7)",
+          "updated": "260706"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "라이브 검증(자동열기 선검증 대기)",
+          "updated": "260706"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-07": {
+      "counts": {
+        "🟡 진행중": 3,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟡 진행중",
+          "stage": "전자서명 4카드 추가·재인덱싱·무회귀 확인 — 서버 반영 대기",
+          "updated": "260707"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "선검증 완료(담당자 1회 전달 대기)",
+          "updated": "260707"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-08": {
+      "counts": {
+        "🟡 진행중": 3,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟡 진행중",
+          "stage": "온보딩 지침 반영 완료 · 원문 자료 수령 대기",
+          "updated": "260708"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "선검증 완료(담당자 1회 전달 대기)",
+          "updated": "260708"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-09": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "규정 53카드 라이브 배포 완료",
+          "updated": "260709"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "구현(라이브 검증)",
+          "updated": "260709"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-10": {
+      "counts": {
+        "🟡 진행중": 3,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟡 진행중",
+          "stage": "피드백 채널 — 버그 2건 해소, 최종 동작 테스트 1건 대기",
+          "updated": "260710"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "구현(라이브 검증)",
+          "updated": "260709"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-11": {
+      "counts": {
+        "🟡 진행중": 3,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟡 진행중",
+          "stage": "피드백 채널 — 버그 2건 해소, 최종 동작 테스트 1건 대기",
+          "updated": "260710"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "구현(라이브 검증)",
+          "updated": "260709"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-12": {
+      "counts": {
+        "🟡 진행중": 3,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟡 진행중",
+          "stage": "피드백 채널 — 버그 2건 해소, 최종 동작 테스트 1건 대기",
+          "updated": "260710"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "구현(라이브 검증)",
+          "updated": "260709"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-13": {
+      "counts": {
+        "🟡 진행중": 3,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟡 진행중",
+          "stage": "피드백 채널 — 버그 2건 해소, 최종 동작 테스트 1건 대기",
+          "updated": "260710"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "구현(라이브 검증)",
+          "updated": "260713"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-14": {
+      "counts": {
+        "🟡 진행중": 3,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟡 진행중",
+          "stage": "피드백 채널 — 버그 2건 해소, 최종 동작 테스트 1건 대기",
+          "updated": "260710"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "구현(라이브 검증)",
+          "updated": "260713"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    }
+  }
+}
