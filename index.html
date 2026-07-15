@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AX 대시보드</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<style>
+  :root{
+    --bg:#f6f7fb; --card:#fff; --ink:#1f2430; --sub:#6b7280; --line:#e5e7eb;
+    --green:#16a34a; --amber:#d97706; --red:#dc2626; --blue:#2563eb; --violet:#7c3aed;
+    --chip:#eef2ff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:'Segoe UI','Malgun Gothic',system-ui,sans-serif;}
+  .wrap{max-width:1200px;margin:0 auto;padding:24px 20px 60px;}
+  h1{font-size:22px;margin:0 0 2px;}
+  .meta{color:var(--sub);font-size:13px;margin-bottom:18px;}
+  h2{font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:var(--sub);
+     margin:30px 0 12px;border-bottom:1px solid var(--line);padding-bottom:6px;}
+  .stats{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:6px;}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;
+        padding:12px 16px;min-width:120px;flex:1;}
+  .stat .n{font-size:24px;font-weight:700;}
+  .stat .l{font-size:12px;color:var(--sub);margin-top:2px;}
+  .board{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;}
+  .col{background:transparent;}
+  .col h3{font-size:13px;margin:0 0 10px;display:flex;align-items:center;gap:6px;}
+  .col h3 .cnt{background:var(--line);border-radius:10px;padding:1px 8px;font-size:11px;color:var(--sub);}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+        padding:13px 14px;margin-bottom:10px;box-shadow:0 1px 2px rgba(0,0,0,.03);}
+  .card .top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;}
+  .card .name{font-weight:650;font-size:14px;line-height:1.3;}
+  .card .stage{color:var(--sub);font-size:12px;margin:3px 0 8px;}
+  .card .headline{font-size:13.5px;line-height:1.5;color:#111827;font-weight:550;margin-bottom:6px;}
+  .card .flow{font-size:11.5px;line-height:1.45;color:#6b7280;margin-bottom:7px;}
+  .card .watch{font-size:12.5px;line-height:1.45;color:#92400e;background:#fffbeb;border:1px solid #fde68a;
+               border-radius:8px;padding:6px 9px;}
+  .card .more{margin-top:9px;}
+  .card .more summary{font-size:11.5px;color:var(--sub);cursor:pointer;outline:none;}
+  .card .prog{font-size:12px;line-height:1.55;color:#4b5563;margin-top:6px;}
+  .card .prog b{color:var(--blue);}
+  .card .foot{display:flex;justify-content:space-between;align-items:center;margin-top:10px;}
+  .badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:8px;white-space:nowrap;}
+  .b-High{background:#fee2e2;color:var(--red);}
+  .b-Mid{background:#fef3c7;color:var(--amber);}
+  .b-Low{background:#e5e7eb;color:var(--sub);}
+  .owner{font-size:11px;padding:2px 8px;border-radius:8px;background:var(--chip);color:var(--violet);}
+  .owner.수기{background:#f3f4f6;color:var(--sub);}
+  a.link{font-size:11px;color:var(--blue);text-decoration:none;}
+  a.link:hover{text-decoration:underline;}
+  .upd{font-size:11px;color:var(--sub);}
+  .grid2{display:grid;grid-template-columns:1.4fr 1fr;gap:18px;}
+  @media(max-width:760px){.grid2{grid-template-columns:1fr;}}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;}
+  .chrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;}
+  .chchip{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:12.5px;}
+  .chchip b{font-size:15px;}
+  .emoji{color:var(--sub);font-size:12px;margin-top:4px;}
+  .foot-note{color:var(--sub);font-size:12px;margin-top:8px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🛠️ 서울 AI 허브 — AX 대시보드</h1>
+  <div class="meta" id="meta">불러오는 중…</div>
+
+  <h2>프로젝트 상태 보드</h2>
+  <div class="stats" id="pstats"></div>
+  <div class="board" id="board"></div>
+
+  <h2>채널 활성화 (AI 리터러시)</h2>
+  <div class="grid2">
+    <div class="panel">
+      <div style="font-size:13px;color:var(--sub);margin-bottom:6px;">일자별 참여도 추이 (게시물 + 반응)</div>
+      <canvas id="trend" height="170"></canvas>
+      <div class="foot-note" id="trendnote"></div>
+    </div>
+    <div class="panel">
+      <div style="font-size:13px;color:var(--sub);margin-bottom:8px;">채널 현황 (최신)</div>
+      <div id="chcards"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const STATUS_ORDER = ["🟢 진행중","🟡 진행중","🟡 검토중","🟡 기획","🟢 사실상 완료"];
+const COLORS = ["#2563eb","#16a34a","#d97706","#7c3aed","#dc2626","#0891b2"];
+const esc = s => (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+
+fetch('./data.json?t='+Date.now()).then(r=>r.json()).then(render).catch(e=>{
+  document.getElementById('meta').textContent = 'data.json 로드 실패: '+e;
+});
+
+function render(d){
+  const gen = new Date(d.generated_at);
+  document.getElementById('meta').textContent =
+    `최근 갱신: ${gen.toLocaleString('ko-KR')} · 프로젝트 ${d.projects.length}건`;
+
+  // ---- 프로젝트 상태 요약 칩
+  const counts = {};
+  d.projects.forEach(p=>counts[p.status]=(counts[p.status]||0)+1);
+  const active = d.projects.filter(p=>p.status.includes("진행")).length;
+  const done = d.projects.filter(p=>p.status.includes("완료")).length;
+  document.getElementById('pstats').innerHTML = `
+    <div class="stat"><div class="n">${d.projects.length}</div><div class="l">전체 프로젝트</div></div>
+    <div class="stat"><div class="n" style="color:var(--green)">${active}</div><div class="l">진행중(활성)</div></div>
+    <div class="stat"><div class="n" style="color:var(--blue)">${done}</div><div class="l">완료</div></div>
+    <div class="stat"><div class="n">${d.projects.filter(p=>p.decision==='Yes').length}</div><div class="l">결정 필요</div></div>`;
+
+  // ---- 보드 (상태별 컬럼)
+  const statuses = [...new Set(d.projects.map(p=>p.status))]
+    .sort((a,b)=>(STATUS_ORDER.indexOf(a)+99*(STATUS_ORDER.indexOf(a)<0))-(STATUS_ORDER.indexOf(b)+99*(STATUS_ORDER.indexOf(b)<0)));
+  const board = document.getElementById('board');
+  board.innerHTML = statuses.map(st=>{
+    const items = d.projects.filter(p=>p.status===st);
+    return `<div class="col"><h3>${esc(st)}<span class="cnt">${items.length}</span></h3>
+      ${items.map(card).join("")}</div>`;
+  }).join("");
+
+  // ---- 채널 현황 (최신 날짜 행)
+  const latestDate = d.channel_history.length ? d.channel_history[d.channel_history.length-1].date : null;
+  const latest = d.channel_history.filter(r=>r.date===latestDate);
+  document.getElementById('chcards').innerHTML = latest.map(c=>`
+    <div class="chchip" style="display:block;margin-bottom:8px;">
+      <div style="font-weight:650">#${esc(c.channel)}</div>
+      <div style="margin-top:3px">멤버 <b>${c.members??0}</b> · 글 <b>${c.posts_total??0}</b> · 댓글 <b>${c.replies_total??0}</b> · 반응 <b>${c.reactions_total??0}</b></div>
+      ${c.top_emojis?`<div class="emoji">인기: ${esc(c.top_emojis)}</div>`:''}
+    </div>`).join("") || '<div class="foot-note">채널 데이터 없음</div>';
+
+  // ---- 추이 차트
+  drawTrend(d.channel_history);
+}
+
+function card(p){
+  const ownerClass = p.owner==='수기' ? 'owner 수기' : 'owner';
+  const detail = [
+    p.progress?`<b>진행</b> ${esc(p.progress)}`:'',
+    p.next?`<b>다음</b> ${esc(p.next)}`:'',
+    p.risk?`<b>리스크</b> ${esc(p.risk)}`:'',
+    p.deliverable&&p.deliverable!=='-'?`<b>산출물</b> ${esc(p.deliverable)}`:'',
+  ].filter(Boolean).join('<br>');
+  return `<div class="card">
+    <div class="top"><div class="name">${esc(p.name)}</div>
+      <span class="badge b-${esc(p.priority)}">${esc(p.priority)}</span></div>
+    <div class="stage">${esc(p.stage)}</div>
+    <div class="headline">${esc(p.headline||p.progress)}</div>
+    ${p.flow?`<div class="flow">↳ ${esc(p.flow)}</div>`:''}
+    ${p.watch?`<div class="watch">👁 ${esc(p.watch)}</div>`:''}
+    <div class="foot">
+      <span class="${ownerClass}">${esc(p.owner||'')}</span>
+      <span class="upd">${esc(p.updated||'')}</span>
+      ${p.page_url?`<a class="link" href="${esc(p.page_url)}" target="_blank">페이지 ↗</a>`:''}
+    </div>
+    ${detail?`<details class="more"><summary>실무 상세</summary><div class="prog">${detail}</div></details>`:''}
+  </div>`;
+}
+
+function drawTrend(hist){
+  const dates = [...new Set(hist.map(r=>r.date))].sort();
+  const channels = [...new Set(hist.map(r=>r.channel))];
+  const note = document.getElementById('trendnote');
+  if(dates.length<2) note.textContent = `※ 현재 ${dates.length}일치 데이터. 매일 12·17시 스냅샷이 쌓이면 추이선이 길어집니다.`;
+  const datasets = channels.map((ch,i)=>{
+    const c = COLORS[i%COLORS.length];
+    return {
+      label:'#'+ch, borderColor:c, backgroundColor:c,
+      tension:.3, pointRadius:4, borderWidth:2,
+      data:dates.map(dt=>{
+        const row = hist.find(r=>r.date===dt && r.channel===ch);
+        // 참여도 = 그날 게시물 + 누적 반응 증가는 별도, 여기선 '오늘 게시물 + 반응총합' 가시화
+        return row ? (row.posts_today||0) + (row.reactions_total||0) : null;
+      })
+    };
+  });
+  new Chart(document.getElementById('trend'),{
+    type:'line',
+    data:{labels:dates, datasets},
+    options:{responsive:true, plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}},
+      scales:{y:{beginAtZero:true,ticks:{precision:0}}}}
+  });
+}
+</script>
+</body>
+</html>
