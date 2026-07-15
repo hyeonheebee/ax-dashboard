@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T10:15:42.131675+09:00",
+  "generated_at": "2026-07-15T12:00:30.280030+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -596,8 +596,8 @@
       "posts_total": 14,
       "posts_today": 0,
       "replies_total": 9,
-      "reactions_total": 83,
-      "top_emojis": "매기필승×16, gratitude-gamsahamnida×11, +1×11",
+      "reactions_total": 86,
+      "top_emojis": "매기필승×17, +1×12, gratitude-gamsahamnida×11",
       "last_text": "*[Tips] - 고사양 모델(Fable 5·Sol) 프롬프팅* 이번주 <#C0B892PFH0A> 채널에서 공유드린 바와 같이, *Anthropic 이 _Fable 5 구독 포함(무료) 기간을 7/19까지 재연장_했…"
     },
     {
