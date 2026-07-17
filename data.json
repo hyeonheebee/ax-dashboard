@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-07-16T17:00:31.167812+09:00",
+  "generated_at": "2026-07-17T12:00:31.258030+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
       "key": "gcb",
       "priority": "High",
-      "status": "🟡 진행중",
-      "stage": "피드백 채널 — 버그 2건 해소, 최종 동작 테스트 1건 대기",
-      "headline": "피드백 채널 무반응의 원인 2개(슬랙 설정+코드 결함)를 모두 잡음 — 채널에 테스트 글 1개만 올려 확인하면 가동",
-      "flow": "채널 핸들러 구현·배포 → 무반응 → 1차: 이벤트 구독 재설치(심현희) → 여전히 무반응 → 심현희 '코드부터 확인해' → Bolt 리스너 이중등록 버그 확정·수정·재배포",
-      "watch": "최종 테스트('봇 테스트 4') 미확인 상태로 세션 종료 / 신규 규정 13종 PDF 도착(미착수) — 2026 관리지침 판올림이 기존 REG 15카드와 충돌 가능",
+      "status": "🟡 검토중",
+      "stage": "규정 검수표 검수 대기 · 종합모드(리스크검토) 구현 전 리스크 분석 완료",
+      "headline": "신규 규정 283건 검수표 대기 중 / '리스크 검토형 질문'도 답하는 종합모드는 실측 리스크 분석 완료 — 개인정보 3중 방어 등 5개 조건 충족 시 구현 가능 판정",
+      "flow": "NotebookLM 대비 격차 진단 → 프로토타입 성공(환각 0) → 서브에이전트 5축 리스크 실측(검색회귀·적대테스트·트리거·운영·개인정보) → 조건부 GO 판정, 심현희 구현 승인 대기",
+      "watch": "적대 테스트에서 개인정보 유출 1건 자연 재현(캘린더 카드→특정인 실명·이메일·출근패턴) — 3중 방어 필수 / 지연 27~60초는 UX 설계 필요 / 검수표(v2_전체.xlsx) 수동 검수 별도 대기",
       "purpose": "사내 업무지침을 Slack에서 질의·검수",
       "progress": "VPS 서버에서 24/7 라이브 가동 중. 온보딩 21카드 + 전자서명 가이드 4카드 반영(총 118카드), 재인덱싱 후 신규 질의 7/7 적중·기존 정확도 88% 유지(무회귀). 봇 답변에 자료 바로가기 링크 자동 첨부. 서버 반영 시 재인덱싱 필수(json만 올리면 벡터검색 꺼짐)",
-      "next": "채널 테스트 확인 → 수집 가동 확인 → 신규 13종 발췌 파이프라인(판올림 대조 선행)",
+      "next": "심현희 승인 시: PII 3중 방어→트리거(종합→검수 순서)→검색 전처리(경계보호판)→구현→풀 eval→배포",
       "decision": "No",
       "risk": "원문 Anthropic 전송=보안(확장 시), 할루시네이션, 비용",
-      "updated": "260710",
+      "updated": "260711",
       "meeting": "260623 함교수님 미팅",
       "deliverable": "봇(.py) 운영본, bot_guidelines.json(90), 평가셋, 사용로그",
       "page_url": "https://app.notion.com/p/AX-Guide-Check-373341d36ec4808e81f5d39d0dfdb10f",
@@ -643,6 +643,39 @@
       "reactions_total": 40,
       "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
       "last_text": ":+1:"
+    },
+    {
+      "date": "2026-07-17",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 12,
+      "posts_today": 0,
+      "replies_total": 6,
+      "reactions_total": 100,
+      "top_emojis": "gratitude-gamsahamnida×14, 매기필승×14, +1×12",
+      "last_text": "*[행사공유 - 현희 PICK~* :meow_party:*]* 1. *아산 유스프러너 데모데이 (7/21)* <https://event-us.kr/asannanum/event/128669|2026 아산 유스프러너 데…"
+    },
+    {
+      "date": "2026-07-17",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 14,
+      "posts_today": 0,
+      "replies_total": 9,
+      "reactions_total": 86,
+      "top_emojis": "매기필승×17, +1×12, gratitude-gamsahamnida×11",
+      "last_text": "*[Tips] - 고사양 모델(Fable 5·Sol) 프롬프팅* 이번주 <#C0B892PFH0A> 채널에서 공유드린 바와 같이, *Anthropic 이 _Fable 5 구독 포함(무료) 기간을 7/19까지 재연장_했…"
+    },
+    {
+      "date": "2026-07-17",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 3,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 40,
+      "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
+      "last_text": ":+1:"
     }
   ],
   "project_history": {
@@ -1176,6 +1209,39 @@
           "status": "🟡 진행중",
           "stage": "피드백 채널 — 버그 2건 해소, 최종 동작 테스트 1건 대기",
           "updated": "260710"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-17": {
+      "counts": {
+        "🟡 검토중": 1,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟡 검토중",
+          "stage": "규정 검수표 검수 대기 · 종합모드(리스크검토) 구현 전 리스크 분석 완료",
+          "updated": "260711"
         },
         {
           "name": "[AX] 회계 관리 시스템 연동",
