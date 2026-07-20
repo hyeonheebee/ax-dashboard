@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T17:00:33.753047+09:00",
+  "generated_at": "2026-07-20T12:00:34.334695+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -742,6 +742,39 @@
       "reactions_total": 40,
       "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
       "last_text": ":+1:"
+    },
+    {
+      "date": "2026-07-20",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 14,
+      "posts_today": 2,
+      "replies_total": 6,
+      "reactions_total": 107,
+      "top_emojis": "gratitude-gamsahamnida×16, 매기필승×14, +1×13",
+      "last_text": ":+1:"
+    },
+    {
+      "date": "2026-07-20",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 14,
+      "posts_today": 0,
+      "replies_total": 9,
+      "reactions_total": 86,
+      "top_emojis": "매기필승×17, +1×12, gratitude-gamsahamnida×11",
+      "last_text": "*[Tips] - 고사양 모델(Fable 5·Sol) 프롬프팅* 이번주 <#C0B892PFH0A> 채널에서 공유드린 바와 같이, *Anthropic 이 _Fable 5 구독 포함(무료) 기간을 7/19까지 재연장_했…"
+    },
+    {
+      "date": "2026-07-20",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 3,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 40,
+      "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
+      "last_text": ":+1:"
     }
   ],
   "project_history": {
@@ -1363,6 +1396,39 @@
       ]
     },
     "2026-07-19": {
+      "counts": {
+        "🟡 검토중": 1,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟡 검토중",
+          "stage": "규정 검수표 검수 대기 · 종합모드(리스크검토) 구현 전 리스크 분석 완료",
+          "updated": "260711"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-20": {
       "counts": {
         "🟡 검토중": 1,
         "🟡 진행중": 2,
