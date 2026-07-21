@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T17:00:34.477056+09:00",
+  "generated_at": "2026-07-21T12:00:32.258578+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -775,6 +775,39 @@
       "reactions_total": 40,
       "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
       "last_text": ":+1:"
+    },
+    {
+      "date": "2026-07-21",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 14,
+      "posts_today": 0,
+      "replies_total": 6,
+      "reactions_total": 112,
+      "top_emojis": "gratitude-gamsahamnida×18, +1×14, 매기필승×14",
+      "last_text": ":+1:"
+    },
+    {
+      "date": "2026-07-21",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 16,
+      "posts_today": 0,
+      "replies_total": 9,
+      "reactions_total": 89,
+      "top_emojis": "매기필승×17, +1×12, gratitude-gamsahamnida×11",
+      "last_text": ":pray:"
+    },
+    {
+      "date": "2026-07-21",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 3,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 40,
+      "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
+      "last_text": ":+1:"
     }
   ],
   "project_history": {
@@ -1429,6 +1462,39 @@
       ]
     },
     "2026-07-20": {
+      "counts": {
+        "🟡 검토중": 1,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟡 검토중",
+          "stage": "규정 검수표 검수 대기 · 종합모드(리스크검토) 구현 전 리스크 분석 완료",
+          "updated": "260711"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-21": {
       "counts": {
         "🟡 검토중": 1,
         "🟡 진행중": 2,
