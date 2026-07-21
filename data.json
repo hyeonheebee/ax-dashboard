@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-07-21T12:00:32.258578+09:00",
+  "generated_at": "2026-07-21T17:00:29.822067+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
       "key": "gcb",
       "priority": "High",
-      "status": "🟡 검토중",
-      "stage": "규정 검수표 검수 대기 · 종합모드(리스크검토) 구현 전 리스크 분석 완료",
-      "headline": "신규 규정 283건 검수표 대기 중 / '리스크 검토형 질문'도 답하는 종합모드는 실측 리스크 분석 완료 — 개인정보 3중 방어 등 5개 조건 충족 시 구현 가능 판정",
-      "flow": "NotebookLM 대비 격차 진단 → 프로토타입 성공(환각 0) → 서브에이전트 5축 리스크 실측(검색회귀·적대테스트·트리거·운영·개인정보) → 조건부 GO 판정, 심현희 구현 승인 대기",
-      "watch": "적대 테스트에서 개인정보 유출 1건 자연 재현(캘린더 카드→특정인 실명·이메일·출근패턴) — 3중 방어 필수 / 지연 27~60초는 UX 설계 필요 / 검수표(v2_전체.xlsx) 수동 검수 별도 대기",
+      "status": "🔴 조치 필요",
+      "stage": "라이브 장애 대응(충전 대기) + 신기능 배포 보류",
+      "headline": "봇이 지금 답변을 못 하고 있습니다. AI 사용료 잔액이 떨어진 것이 원인이며, 충전하면 바로 정상화됩니다. 새 기능(리스크 검토)은 다 만들어 두고 대기 중입니다.",
+      "flow": "승인 받아 신기능 전면 구현 완료 → 마지막 점검 중 잔액 소진 발견 → 라이브 봇도 같은 이유로 멈춰 있었음을 확인",
+      "watch": "잔액이 떨어진 뒤 5시간 26분 동안 아무 경보가 없었습니다. 감시 장치가 봇의 연결 상태만 보고 'AI를 쓸 수 있는지'는 보지 않았기 때문입니다. 재발 방지 장치 추가를 제안드렸고 승인 대기 중입니다.",
       "purpose": "사내 업무지침을 Slack에서 질의·검수",
       "progress": "VPS 서버에서 24/7 라이브 가동 중. 온보딩 21카드 + 전자서명 가이드 4카드 반영(총 118카드), 재인덱싱 후 신규 질의 7/7 적중·기존 정확도 88% 유지(무회귀). 봇 답변에 자료 바로가기 링크 자동 첨부. 서버 반영 시 재인덱싱 필수(json만 올리면 벡터검색 꺼짐)",
-      "next": "심현희 승인 시: PII 3중 방어→트리거(종합→검수 순서)→검색 전처리(경계보호판)→구현→풀 eval→배포",
+      "next": "AI 사용료 충전(심현희) → 봇 정상화 확인 → 남은 안전 점검 → 신기능 배포",
       "decision": "No",
       "risk": "원문 Anthropic 전송=보안(확장 시), 할루시네이션, 비용",
-      "updated": "260711",
+      "updated": "260721",
       "meeting": "260623 함교수님 미팅",
       "deliverable": "봇(.py) 운영본, bot_guidelines.json(90), 평가셋, 사용로그",
       "page_url": "https://app.notion.com/p/AX-Guide-Check-373341d36ec4808e81f5d39d0dfdb10f",
@@ -783,7 +783,7 @@
       "posts_total": 14,
       "posts_today": 0,
       "replies_total": 6,
-      "reactions_total": 112,
+      "reactions_total": 113,
       "top_emojis": "gratitude-gamsahamnida×18, +1×14, 매기필승×14",
       "last_text": ":+1:"
     },
@@ -791,12 +791,12 @@
       "date": "2026-07-21",
       "channel": "talk-ai-tips",
       "members": 18,
-      "posts_total": 16,
-      "posts_today": 0,
-      "replies_total": 9,
-      "reactions_total": 89,
-      "top_emojis": "매기필승×17, +1×12, gratitude-gamsahamnida×11",
-      "last_text": ":pray:"
+      "posts_total": 17,
+      "posts_today": 1,
+      "replies_total": 10,
+      "reactions_total": 93,
+      "top_emojis": "매기필승×17, +1×13, gratitude-gamsahamnida×12",
+      "last_text": "*[Tips] - ChatGPT 사용량 확인하기* 갑자기 “사용 한도에 도달했습니다”라는 알림이 표시되었나요? :slightly_smiling_face: 데스크톱 앱에서 아래 경로를 통해 현재 사용량과 남은 한도를 …"
     },
     {
       "date": "2026-07-21",
@@ -1496,16 +1496,16 @@
     },
     "2026-07-21": {
       "counts": {
-        "🟡 검토중": 1,
+        "🔴 조치 필요": 1,
         "🟡 진행중": 2,
         "🟢 사실상 완료": 1
       },
       "projects": [
         {
           "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
-          "status": "🟡 검토중",
-          "stage": "규정 검수표 검수 대기 · 종합모드(리스크검토) 구현 전 리스크 분석 완료",
-          "updated": "260711"
+          "status": "🔴 조치 필요",
+          "stage": "라이브 장애 대응(충전 대기) + 신기능 배포 보류",
+          "updated": "260721"
         },
         {
           "name": "[AX] 회계 관리 시스템 연동",
