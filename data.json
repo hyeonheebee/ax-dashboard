@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T12:00:46.722410+09:00",
+  "generated_at": "2026-07-23T17:00:38.816213+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -857,12 +857,12 @@
       "date": "2026-07-23",
       "channel": "talk-ai-tips",
       "members": 18,
-      "posts_total": 17,
-      "posts_today": 0,
-      "replies_total": 10,
-      "reactions_total": 93,
-      "top_emojis": "매기필승×17, +1×13, gratitude-gamsahamnida×12",
-      "last_text": "*[Tips] - ChatGPT 사용량 확인하기* 갑자기 “사용 한도에 도달했습니다”라는 알림이 표시되었나요? :slightly_smiling_face: 데스크톱 앱에서 아래 경로를 통해 현재 사용량과 남은 한도를 …"
+      "posts_total": 19,
+      "posts_today": 2,
+      "replies_total": 12,
+      "reactions_total": 100,
+      "top_emojis": "매기필승×17, +1×15, gratitude-gamsahamnida×14",
+      "last_text": "*[Tips] - Codex, Claude 유용한 스킬 모음* 내용 : <https://codex-skill-library.vercel.app/|<<링크>>> 사용법이 궁금하시다면 Claude 에게 이 링크를 던져보…"
     },
     {
       "date": "2026-07-23",
