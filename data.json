@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T17:00:38.816213+09:00",
+  "generated_at": "2026-07-24T12:00:35.127215+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -874,6 +874,39 @@
       "reactions_total": 40,
       "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
       "last_text": ":+1:"
+    },
+    {
+      "date": "2026-07-24",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 15,
+      "posts_today": 0,
+      "replies_total": 6,
+      "reactions_total": 114,
+      "top_emojis": "gratitude-gamsahamnida×18, +1×14, 매기필승×14",
+      "last_text": "."
+    },
+    {
+      "date": "2026-07-24",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 19,
+      "posts_today": 0,
+      "replies_total": 12,
+      "reactions_total": 101,
+      "top_emojis": "매기필승×18, +1×15, gratitude-gamsahamnida×14",
+      "last_text": "*[Tips] - Codex, Claude 유용한 스킬 모음* 내용 : <https://codex-skill-library.vercel.app/|<<링크>>> 사용법이 궁금하시다면 Claude 에게 이 링크를 던져보…"
+    },
+    {
+      "date": "2026-07-24",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 3,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 40,
+      "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
+      "last_text": ":+1:"
     }
   ],
   "project_history": {
@@ -1627,6 +1660,39 @@
       ]
     },
     "2026-07-23": {
+      "counts": {
+        "🔴 조치 필요": 1,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🔴 조치 필요",
+          "stage": "라이브 장애 대응(충전 대기) + 신기능 배포 보류",
+          "updated": "260721"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-24": {
       "counts": {
         "🔴 조치 필요": 1,
         "🟡 진행중": 2,
