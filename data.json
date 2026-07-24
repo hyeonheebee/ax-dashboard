@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T12:00:35.127215+09:00",
+  "generated_at": "2026-07-24T17:00:32.518350+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -890,12 +890,12 @@
       "date": "2026-07-24",
       "channel": "talk-ai-tips",
       "members": 18,
-      "posts_total": 19,
-      "posts_today": 0,
+      "posts_total": 20,
+      "posts_today": 1,
       "replies_total": 12,
       "reactions_total": 101,
       "top_emojis": "매기필승×18, +1×15, gratitude-gamsahamnida×14",
-      "last_text": "*[Tips] - Codex, Claude 유용한 스킬 모음* 내용 : <https://codex-skill-library.vercel.app/|<<링크>>> 사용법이 궁금하시다면 Claude 에게 이 링크를 던져보…"
+      "last_text": "<!channel> *[Tips] - AX 실습 시리즈 1회차 자료 : 매직 프롬프트로 업무 도구 만들기* *오늘* (7/24, 금) *16:30–17:00 교육실 A(2층)*에서 AX 실습 시리즈 1회차가 진행됩니…"
     },
     {
       "date": "2026-07-24",
