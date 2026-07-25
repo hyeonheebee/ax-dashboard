@@ -35,6 +35,7 @@ test('milestones: 4트랙, 명칭 고정, 단계 상태', () => {
   assert.ok(acc.plans.length >= 3, 'Plan A~C 병기');
   for (const t of ms.tracks) {
     for (const st of t.steps || []) assert.ok(['done', 'current', 'future'].includes(st.state));
+    for (const it of t.items || []) assert.ok(['done', 'current', 'future'].includes(it.state));
   }
 });
 

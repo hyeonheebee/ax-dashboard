@@ -56,7 +56,7 @@
         { "label": "4회차", "state": "future" },
         { "label": "5회차", "state": "future" }
       ],
-      "note": "참석 도장판은 아래 '세션 참석 현황'에서 확인할 수 있어요."
+      "note": "참석 도장판은 아래 '세션 참석 현황'에서 확인할 수 있습니다."
     },
     {
       "key": "automations",
@@ -65,7 +65,7 @@
       "steps": [],
       "items": [
         { "label": "교육·행사 입퇴실 & 만족도 집계 자동화", "state": "done" },
-        { "label": "다음 자동화 과제 발굴 중 — #talk-ax-idea에 아이디어를 남겨주세요", "state": "current" }
+        { "label": "다음 자동화 과제 발굴 중 — 아이디어는 #talk-ax-idea 채널에서 모으고 있습니다", "state": "current" }
       ],
       "note": "회계 자동화 검증에서 얻은 기술을 작은 과제부터 차례로 적용합니다."
     }
