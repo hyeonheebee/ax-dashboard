@@ -4,6 +4,56 @@ import { heldSessions } from './badges.js';
 
 export const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
+const CH_COLORS = ['#2563eb', '#16a34a', '#d97706'];
+
+export function renderChannels(data) {
+  const hist = data.channel_history || [];
+  if (!hist.length) {
+    document.getElementById('chcards').innerHTML = '<p class="foot-note">채널 데이터가 아직 없어요.</p>';
+    return;
+  }
+  const dates = [...new Set(hist.map(r => r.date))].sort();
+  const channels = [...new Set(hist.map(r => r.channel))];
+  const latest = hist.filter(r => r.date === dates[dates.length - 1]);
+
+  document.getElementById('chcards').innerHTML =
+    '<div style="font-size:13px;color:var(--sub);margin-bottom:8px">채널별 현황 (오늘)</div>' +
+    latest.map(c => `<div class="chchip">
+      <div class="nm">#${esc(c.channel)}</div>
+      멤버 <b>${c.members ?? 0}</b> · 글 <b>${c.posts_total ?? 0}</b> · 댓글 <b>${c.replies_total ?? 0}</b> · 반응 <b>${c.reactions_total ?? 0}</b>
+      ${c.top_emojis ? `<div class="emoji">인기 반응: ${esc(c.top_emojis)}</div>` : ''}
+    </div>`).join('');
+
+  // 작성자 분리 필드(수집기 확장 후 생김)가 있으면 구성원 참여 카드 표시
+  const withMembers = latest.filter(c => typeof c.posts_by_members === 'number');
+  if (withMembers.length) {
+    const total = withMembers.reduce((a, c) => a + c.posts_by_members, 0);
+    document.getElementById('member-participation').innerHTML =
+      `<div class="member-part">🙌 구성원이 직접 올린 글 <b>${total}</b>건 — 함께 만드는 채널이 되고 있어요!</div>`;
+  }
+
+  new Chart(document.getElementById('trend'), {
+    type: 'line',
+    data: {
+      labels: dates,
+      datasets: channels.map((ch, i) => ({
+        label: '#' + ch, borderColor: CH_COLORS[i % 3], backgroundColor: CH_COLORS[i % 3],
+        tension: .3, pointRadius: 2.5, borderWidth: 2, spanGaps: true,
+        data: dates.map(dt => {
+          const row = hist.find(r => r.date === dt && r.channel === ch);
+          return row ? (row.posts_today || 0) + (row.reactions_total || 0) : null;
+        }),
+      })),
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
+                 title: { display: true, text: '일자별 참여 흐름 (새 글 + 누적 반응)', font: { size: 12 } } },
+      scales: { y: { beginAtZero: true, ticks: { precision: 0 } } },
+    },
+  });
+}
+
 async function fetchJSON(url) {
   const r = await fetch(url + (url.includes('?') ? '&' : '?') + 't=' + Date.now());
   if (!r.ok) throw new Error(url + ' → ' + r.status);
@@ -50,7 +100,7 @@ async function main() {
   document.getElementById('meta').textContent =
     '자동 갱신 · 마지막 데이터 수집: ' + new Date(data.generated_at).toLocaleString('ko-KR');
   renderMilestones(ms, att, data);
-  // Task 5: renderChannels(data);
+  renderChannels(data);
   // Task 6: renderAttendance(att, window.localStorage);
 }
 main().catch(e => {
