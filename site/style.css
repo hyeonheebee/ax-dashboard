@@ -1,0 +1,47 @@
+:root{
+  --bg:#f7f8fc; --card:#fff; --ink:#1e2430; --sub:#69707f; --line:#e4e7ef;
+  --brand:#2563eb; --ok:#16a34a; --warn:#d97706; --violet:#7c3aed; --chip:#eef2ff;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Pretendard','Segoe UI','Malgun Gothic',system-ui,sans-serif;line-height:1.55}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 20px 80px}
+header h1{font-size:26px;margin:0}
+.tagline{color:var(--sub);margin:6px 0 0}
+.meta{color:var(--sub);font-size:12.5px}
+h2{font-size:17px;margin:44px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.grid2{display:grid;grid-template-columns:1.5fr 1fr;gap:16px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+.foot-note{color:var(--sub);font-size:12px;margin:8px 0 0}
+.hint{color:var(--sub);font-size:13px}
+footer{margin-top:60px;color:var(--sub);font-size:12.5px;text-align:center}
+
+/* 마일스톤 트랙 */
+.track{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:14px}
+.track .head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.track h3{margin:0;font-size:15.5px}
+.track .subtitle{color:var(--sub);font-size:13px}
+.track .pill{font-size:11px;font-weight:700;padding:2px 10px;border-radius:99px}
+.pill.ing{background:#eff6ff;color:var(--brand)}
+.pill.done{background:#f0fdf4;color:var(--ok)}
+.pill.closing{background:#fff7ed;color:var(--warn)}
+.steps{display:flex;align-items:flex-start;margin:16px 0 4px;overflow-x:auto;padding-bottom:6px}
+.step{flex:1;min-width:90px;text-align:center;position:relative;font-size:12px;color:var(--sub)}
+.step .dot{width:14px;height:14px;border-radius:50%;margin:0 auto 6px;background:var(--line);position:relative;z-index:1}
+.step.done .dot{background:var(--ok)}
+.step.done{color:var(--ink)}
+.step.current .dot{background:var(--brand);box-shadow:0 0 0 4px #dbeafe}
+.step.current{color:var(--brand);font-weight:650}
+.step::before{content:'';position:absolute;top:7px;left:-50%;width:100%;height:2px;background:var(--line)}
+.step:first-child::before{display:none}
+.step.done::before{background:var(--ok)}
+.step.current::before{background:var(--ok)}
+.track .note{font-size:13px;color:var(--sub);margin:10px 0 0}
+.plans{margin-top:12px}
+.plans summary{cursor:pointer;font-size:13px;color:var(--brand);font-weight:600}
+.plan{border-left:3px solid var(--line);padding:8px 0 8px 14px;margin:10px 0}
+.plan b{font-size:13.5px}
+.plan p{margin:3px 0;font-size:13px;color:var(--sub)}
+.items li{font-size:13.5px;margin:6px 0}
+.items .done::before{content:'✅ '}
+.items .current::before{content:'🔄 '}
