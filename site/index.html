@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>서울 AI 허브 — AX 여정</title>
+<link rel="stylesheet" href="./style.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🚀 서울 AI 허브 AX 여정</h1>
+    <p class="tagline">우리 조직의 AI 전환, 지금 어디까지 왔는지 투명하게 공유합니다.</p>
+    <p class="meta" id="meta"></p>
+  </header>
+
+  <section id="sec-milestones">
+    <h2>AX 프로젝트 마일스톤</h2>
+    <div id="tracks"></div>
+  </section>
+
+  <section id="sec-channels">
+    <h2>AI 채널 활동</h2>
+    <div class="grid2">
+      <div class="panel"><canvas id="trend" height="180"></canvas><p class="foot-note" id="trendnote"></p></div>
+      <div class="panel" id="chcards"></div>
+    </div>
+    <div id="member-participation"></div>
+  </section>
+
+  <section id="sec-attendance">
+    <h2>AX 실습 시리즈 — 참석 도장판</h2>
+    <p class="hint">이름을 누르면 도장판과 뱃지가 열립니다. 내 이름을 선택하면 다음부터 내 카드가 맨 위에 고정돼요.</p>
+    <div id="mycard"></div>
+    <div id="members" class="member-list"></div>
+  </section>
+
+  <footer>서울 AI 허브 AX · 문의는 #talk-ax-idea 채널로</footer>
+</div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>

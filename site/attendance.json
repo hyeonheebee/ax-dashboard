@@ -1,0 +1,15 @@
+{
+  "program": { "title": "AX 실습 시리즈", "total_sessions": 5 },
+  "sessions": [
+    { "no": 1, "date": "2026-07-24", "title": "매직 프롬프트로 업무 도구 만들기", "held": true },
+    { "no": 2, "date": null, "title": "2회차 (준비 중)", "held": false },
+    { "no": 3, "date": null, "title": "3회차 (준비 중)", "held": false },
+    { "no": 4, "date": null, "title": "4회차 (준비 중)", "held": false },
+    { "no": 5, "date": null, "title": "5회차 (준비 중)", "held": false }
+  ],
+  "members": [
+    { "name": "장문석", "attended": [1], "reviews": [1], "maker": [1] },
+    { "name": "이슬기", "attended": [1], "reviews": [1], "maker": [1] },
+    { "name": "정준호", "attended": [1], "reviews": [1], "maker": [1] }
+  ]
+}
