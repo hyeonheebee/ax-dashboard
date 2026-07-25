@@ -52,3 +52,34 @@ footer{margin-top:60px;color:var(--sub);font-size:12.5px;text-align:center}
 .chchip .nm{font-weight:700;margin-bottom:2px}
 .emoji{color:var(--sub);font-size:12px;margin-top:3px}
 .member-part{margin-top:14px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:12px 16px;font-size:13.5px}
+
+/* 참석 도장판 */
+.member-list{display:flex;flex-wrap:wrap;gap:10px}
+.member-chip{background:var(--card);border:1px solid var(--line);border-radius:99px;
+  padding:8px 18px;font-size:14px;cursor:pointer;transition:all .15s}
+.member-chip:hover{border-color:var(--brand);color:var(--brand)}
+.member-chip.open{background:var(--brand);color:#fff;border-color:var(--brand)}
+.profile-card{background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:20px 22px;margin:12px 0;width:100%;animation:reveal .25s ease-out}
+@keyframes reveal{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.profile-card .top{display:flex;align-items:center;gap:12px}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--chip);color:var(--violet);
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px}
+.profile-card .who{font-weight:700;font-size:16px}
+.streak{font-size:13px;color:var(--warn);font-weight:650}
+.stamps{display:flex;gap:12px;margin:16px 0;flex-wrap:wrap}
+.stamp{width:64px;text-align:center}
+.stamp .circle{width:54px;height:54px;border-radius:50%;border:2px dashed var(--line);
+  margin:0 auto 5px;display:flex;align-items:center;justify-content:center;font-size:24px;position:relative}
+.stamp.got .circle{border:2px solid var(--ok);background:#f0fdf4;animation:stampin .35s cubic-bezier(.2,1.6,.4,1)}
+@keyframes stampin{0%{transform:scale(1.6) rotate(-14deg);opacity:0}100%{transform:scale(1) rotate(0);opacity:1}}
+.stamp .rv{position:absolute;right:-4px;bottom:-4px;font-size:14px}
+.stamp .lb{font-size:10.5px;color:var(--sub)}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.badge-tile{background:var(--chip);border-radius:10px;padding:6px 12px;font-size:12.5px;font-weight:600}
+.badge-tile .d{display:block;font-weight:400;font-size:11px;color:var(--sub)}
+.mine-actions{margin-top:12px;font-size:12px}
+.mine-actions button{border:1px solid var(--line);background:none;border-radius:8px;
+  padding:4px 10px;cursor:pointer;color:var(--sub);font-size:12px}
+#mycard .profile-card{border:2px solid var(--brand)}
+#mycard .mytag{font-size:11px;font-weight:700;color:var(--brand);margin-bottom:6px}

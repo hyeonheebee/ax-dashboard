@@ -1,6 +1,7 @@
 // site/app.js
 import { CONFIG } from './config.js';
-import { heldSessions } from './badges.js';
+import { deriveStamps, deriveStreak, deriveBadges, BADGE_DEFS, heldSessions } from './badges.js';
+import { getMyName, setMyName, clearMyName } from './identity.js';
 
 export const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
@@ -54,6 +55,67 @@ export function renderChannels(data) {
   });
 }
 
+function profileCardHTML(m, att, isMine) {
+  const stamps = deriveStamps(m, att.sessions);
+  const streak = deriveStreak(m, att.sessions);
+  const badges = deriveBadges(m, att.sessions, att.program.total_sessions);
+  return `<div class="profile-card">
+    ${isMine ? '<div class="mytag">⭐ 내 도장판</div>' : ''}
+    <div class="top">
+      <div class="avatar">${esc(m.name.slice(0, 1))}</div>
+      <div><div class="who">${esc(m.name)}</div>
+      ${streak >= 2 ? `<div class="streak">🔥 ${streak}회 연속 참석 중</div>` : ''}</div>
+    </div>
+    <div class="stamps">${stamps.map(s => `
+      <div class="stamp ${s.attended ? 'got' : ''}">
+        <div class="circle">${s.attended ? '✅' : ''}${s.review ? '<span class="rv">✍️</span>' : ''}</div>
+        <div class="lb">${s.no}회차</div>
+      </div>`).join('')}</div>
+    <div class="badges">${badges.map(k => {
+      const d = BADGE_DEFS[k];
+      return `<div class="badge-tile">${d.emoji} ${esc(d.label)}<span class="d">${esc(d.desc)}</span></div>`;
+    }).join('') || '<span class="foot-note">다음 세션에서 첫 뱃지를 받아보세요 🌱</span>'}</div>
+    ${isMine ? `<div class="mine-actions"><button id="unset-me">내 이름 선택 해제</button></div>` : ''}
+  </div>`;
+}
+
+export function renderAttendance(att, storage) {
+  const membersEl = document.getElementById('members');
+  const myEl = document.getElementById('mycard');
+  const sorted = [...att.members].sort((a, b) => a.name.localeCompare(b.name, 'ko'));
+  const myName = getMyName(storage);
+  let openName = null;
+
+  function draw() {
+    const mine = sorted.find(m => m.name === myName);
+    myEl.innerHTML = mine ? profileCardHTML(mine, att, true) : '';
+    if (mine) document.getElementById('unset-me').onclick = () => { clearMyName(storage); location.reload(); };
+
+    membersEl.innerHTML = sorted.filter(m => m.name !== myName).map(m =>
+      `<button class="member-chip ${openName === m.name ? 'open' : ''}" data-name="${esc(m.name)}">${esc(m.name)}</button>`
+    ).join('');
+    const openM = sorted.find(m => m.name === openName && m.name !== myName);
+    if (openM) membersEl.insertAdjacentHTML('beforeend', profileCardHTML(openM, att, false));
+
+    membersEl.querySelectorAll('.member-chip').forEach(btn => {
+      btn.onclick = () => {
+        const name = btn.dataset.name;
+        if (!myName) {
+          // 첫 클릭 시 내 이름인지 물어봄 → 내 카드 고정 (은근한 개인화)
+          if (confirm(`'${name}' — 내 이름으로 고정할까요?\n(취소하면 카드만 열어봅니다)`)) {
+            setMyName(storage, name);
+            location.reload();
+            return;
+          }
+        }
+        openName = openName === name ? null : name;
+        draw();
+      };
+    });
+  }
+  draw();
+}
+
 async function fetchJSON(url) {
   const r = await fetch(url + (url.includes('?') ? '&' : '?') + 't=' + Date.now());
   if (!r.ok) throw new Error(url + ' → ' + r.status);
@@ -101,7 +163,7 @@ async function main() {
     '자동 갱신 · 마지막 데이터 수집: ' + new Date(data.generated_at).toLocaleString('ko-KR');
   renderMilestones(ms, att, data);
   renderChannels(data);
-  // Task 6: renderAttendance(att, window.localStorage);
+  renderAttendance(att, window.localStorage);
 }
 main().catch(e => {
   document.getElementById('meta').textContent = '데이터를 불러오지 못했어요. 잠시 후 새로고침해 주세요.';
