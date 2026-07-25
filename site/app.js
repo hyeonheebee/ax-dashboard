@@ -27,32 +27,34 @@ export function renderChannels(data) {
 
   // 작성자 분리 필드(수집기 확장 후 생김)가 있으면 구성원 참여 카드 표시
   const withMembers = latest.filter(c => typeof c.posts_by_members === 'number');
-  if (withMembers.length) {
-    const total = withMembers.reduce((a, c) => a + c.posts_by_members, 0);
+  const total = withMembers.reduce((a, c) => a + c.posts_by_members, 0);
+  if (withMembers.length && total > 0) {
     document.getElementById('member-participation').innerHTML =
       `<div class="member-part">🙌 구성원이 직접 올린 글 <b>${total}</b>건 — 함께 만드는 채널이 되고 있어요!</div>`;
   }
 
-  new Chart(document.getElementById('trend'), {
-    type: 'line',
-    data: {
-      labels: dates,
-      datasets: channels.map((ch, i) => ({
-        label: '#' + ch, borderColor: CH_COLORS[i % 3], backgroundColor: CH_COLORS[i % 3],
-        tension: .3, pointRadius: 2.5, borderWidth: 2, spanGaps: true,
-        data: dates.map(dt => {
-          const row = hist.find(r => r.date === dt && r.channel === ch);
-          return row ? (row.posts_today || 0) + (row.reactions_total || 0) : null;
-        }),
-      })),
-    },
-    options: {
-      responsive: true,
-      plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
-                 title: { display: true, text: '일자별 참여 흐름 (새 글 + 누적 반응)', font: { size: 12 } } },
-      scales: { y: { beginAtZero: true, ticks: { precision: 0 } } },
-    },
-  });
+  if (typeof Chart !== 'undefined') {
+    new Chart(document.getElementById('trend'), {
+      type: 'line',
+      data: {
+        labels: dates,
+        datasets: channels.map((ch, i) => ({
+          label: '#' + ch, borderColor: CH_COLORS[i % 3], backgroundColor: CH_COLORS[i % 3],
+          tension: .3, pointRadius: 2.5, borderWidth: 2, spanGaps: true,
+          data: dates.map(dt => {
+            const row = hist.find(r => r.date === dt && r.channel === ch);
+            return row ? (row.posts_today || 0) + (row.reactions_total || 0) : null;
+          }),
+        })),
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
+                   title: { display: true, text: '일자별 참여 흐름 (새 글 + 누적 반응)', font: { size: 12 } } },
+        scales: { y: { beginAtZero: true, ticks: { precision: 0 } } },
+      },
+    });
+  }
 }
 
 function profileCardHTML(m, att, isMine) {
@@ -84,6 +86,7 @@ export function renderAttendance(att, storage) {
   const myEl = document.getElementById('mycard');
   const sorted = [...att.members].sort((a, b) => a.name.localeCompare(b.name, 'ko'));
   const myName = getMyName(storage);
+  if (myName && !sorted.some(m => m.name === myName)) { clearMyName(storage); location.reload(); return; }
   let openName = null;
 
   function draw() {
@@ -161,9 +164,9 @@ async function main() {
   ]);
   document.getElementById('meta').textContent =
     '자동 갱신 · 마지막 데이터 수집: ' + new Date(data.generated_at).toLocaleString('ko-KR');
-  renderMilestones(ms, att, data);
-  renderChannels(data);
-  renderAttendance(att, window.localStorage);
+  try { renderMilestones(ms, att, data); } catch (e) { console.error(e); }
+  try { renderChannels(data); } catch (e) { console.error(e); }
+  try { renderAttendance(att, window.localStorage); } catch (e) { console.error(e); }
 }
 main().catch(e => {
   document.getElementById('meta').textContent = '데이터를 불러오지 못했어요. 잠시 후 새로고침해 주세요.';

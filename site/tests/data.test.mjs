@@ -22,6 +22,9 @@ test('attendance: 프로그램·세션·멤버 스키마', () => {
     // 참석하지 않은 회차의 후기는 불가
     for (const r of m.reviews) assert.ok(m.attended.includes(r), `${m.name} 후기 ${r}회차는 참석 기록 필요`);
   }
+  const names = att.members.map(m => m.name);
+  assert.equal(new Set(names).size, names.length, '동명이인은 별도 표기 필요 (구분자 추가)');
+  for (const m of att.members) for (const k of m.maker) assert.ok(m.attended.includes(k), `${m.name} maker ${k}회차는 참석 기록 필요`);
 });
 
 test('milestones: 4트랙, 명칭 고정, 단계 상태', () => {

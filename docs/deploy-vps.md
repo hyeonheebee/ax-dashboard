@@ -6,6 +6,8 @@ Guide Check Bot이 돌고 있는 VPS에 정적 서빙으로 올린다. 서버 �
 
 ```bash
 sudo git clone https://github.com/hyeonheebee/ax-dashboard.git /opt/ax-dashboard
+sudo chown -R $USER:$(id -gn) /opt/ax-dashboard
+git config --global --add safe.directory /opt/ax-dashboard
 sudo tee /etc/nginx/sites-available/ax-site <<'EOF'
 server {
     listen 8080;                     # Guide Check Bot 포트와 겹치지 않게 조정
@@ -22,8 +24,10 @@ sudo nginx -t && sudo systemctl reload nginx
 ## 2) 자동 갱신 (cron, 1분마다 pull)
 
 ```bash
-( crontab -l 2>/dev/null; echo '* * * * * cd /opt/ax-dashboard && git pull --ff-only >> /var/log/ax-pull.log 2>&1' ) | crontab -
+( crontab -l 2>/dev/null; echo '* * * * * cd /opt/ax-dashboard && git pull --ff-only >> $HOME/ax-pull.log 2>&1' ) | crontab -
 ```
+
+> 저장소가 private인 경우 무인 pull을 위해 읽기 전용 deploy key 또는 HTTPS 토큰 자격증명이 필요합니다.
 
 이후 갱신 경로:
 - 프로젝트·채널 데이터: 회사 컴 수집기 push → 1분 내 반영 (기존 파이프라인)
