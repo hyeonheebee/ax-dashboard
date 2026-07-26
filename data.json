@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T17:00:42.491006+09:00",
+  "generated_at": "2026-07-26T12:00:40.199400+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -940,6 +940,39 @@
       "reactions_total": 40,
       "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
       "last_text": ":+1:"
+    },
+    {
+      "date": "2026-07-26",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 15,
+      "posts_today": 0,
+      "replies_total": 6,
+      "reactions_total": 114,
+      "top_emojis": "gratitude-gamsahamnida×18, +1×14, 매기필승×14",
+      "last_text": "."
+    },
+    {
+      "date": "2026-07-26",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 20,
+      "posts_today": 0,
+      "replies_total": 17,
+      "reactions_total": 105,
+      "top_emojis": "매기필승×18, +1×17, gratitude-gamsahamnida×15",
+      "last_text": "<!channel> *[Tips] - AX 실습 시리즈 1회차 자료 : 매직 프롬프트로 업무 도구 만들기* *오늘* (7/24, 금) *16:30–17:00 교육실 A(2층)*에서 AX 실습 시리즈 1회차가 진행됩니…"
+    },
+    {
+      "date": "2026-07-26",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 3,
+      "posts_today": 0,
+      "replies_total": 1,
+      "reactions_total": 40,
+      "top_emojis": "+1×8, gratitude-gamsahamnida×5, meow_party×5",
+      "last_text": ":+1:"
     }
   ],
   "project_history": {
@@ -1758,6 +1791,39 @@
       ]
     },
     "2026-07-25": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "구현(라이브 검증)",
+          "updated": "260725"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-26": {
       "counts": {
         "🟢 진행중": 1,
         "🟡 진행중": 2,
