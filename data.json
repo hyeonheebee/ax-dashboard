@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T17:00:41.156655+09:00",
+  "generated_at": "2026-07-29T12:00:41.017607+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -1039,6 +1039,39 @@
       "reactions_total": 69,
       "top_emojis": "+1×13, meow_party×8, 오×6",
       "last_text": "클로드 테스트겸 토이 프로젝트로 위젯 하나 만들어봤습니다. To-do list, 메모, 오늘의 운세, 오늘의 영문장 정도로 구성되어 있어요. 시간 날때마다 조금씩 디벨롭해볼까 합니다. 매기에게 많관부~ P.S. 처음…"
+    },
+    {
+      "date": "2026-07-29",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 18,
+      "posts_today": 0,
+      "replies_total": 9,
+      "reactions_total": 130,
+      "top_emojis": "gratitude-gamsahamnida×19, +1×17, 매기필승×16",
+      "last_text": "*[행사공유-리마인드!*:meow_party:*]* _*1. AI Summit Seoul &amp; EXPO 2026*_ :rotating_light: *최종 할인등록 D-4 (~7/31)* • *일시/장소*: *8…"
+    },
+    {
+      "date": "2026-07-29",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 21,
+      "posts_today": 0,
+      "replies_total": 18,
+      "reactions_total": 112,
+      "top_emojis": "매기필승×18, gratitude-gamsahamnida×17, +1×17",
+      "last_text": "다음번엔 꼭 참석 할꼐요~ 갑자기 급한 회의가 생기는 바람에 ㅜㅜㅜㅜ! 노고와 열정에 감사드립니다.화이팅!!!"
+    },
+    {
+      "date": "2026-07-29",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 4,
+      "posts_today": 0,
+      "replies_total": 6,
+      "reactions_total": 69,
+      "top_emojis": "+1×13, meow_party×8, 오×6",
+      "last_text": "클로드 테스트겸 토이 프로젝트로 위젯 하나 만들어봤습니다. To-do list, 메모, 오늘의 운세, 오늘의 영문장 정도로 구성되어 있어요. 시간 날때마다 조금씩 디벨롭해볼까 합니다. 매기에게 많관부~ P.S. 처음…"
     }
   ],
   "project_history": {
@@ -1956,6 +1989,39 @@
       ]
     },
     "2026-07-28": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "구현(라이브 검증)",
+          "updated": "260725"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-29": {
       "counts": {
         "🟢 진행중": 1,
         "🟡 진행중": 2,
