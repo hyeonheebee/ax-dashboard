@@ -5,7 +5,10 @@ import { getMyName, setMyName, clearMyName } from './identity.js';
 
 export const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-const CH_COLORS = ['#2563eb', '#16a34a', '#d97706'];
+const CH_COLORS = ['#1E5EFF', '#FFD43B', '#3DDC97'];
+const AXIS = { ticks: { color: '#93A3C7', font: { size: 10.5 } }, grid: { color: 'rgba(148,170,220,.08)' } };
+
+let chartDrawn = false;
 
 export function renderChannels(data) {
   const hist = data.channel_history || [];
@@ -14,7 +17,6 @@ export function renderChannels(data) {
     return;
   }
   const dates = [...new Set(hist.map(r => r.date))].sort();
-  const channels = [...new Set(hist.map(r => r.channel))];
   const latest = hist.filter(r => r.date === dates[dates.length - 1]);
 
   document.getElementById('chcards').innerHTML =
@@ -32,29 +34,38 @@ export function renderChannels(data) {
     document.getElementById('member-participation').innerHTML =
       `<div class="member-part">🙌 구성원이 직접 올린 글 <b>${total}</b>건 — 함께 만드는 채널이 되고 있어요!</div>`;
   }
+}
 
-  if (typeof Chart !== 'undefined') {
-    new Chart(document.getElementById('trend'), {
-      type: 'line',
-      data: {
-        labels: dates,
-        datasets: channels.map((ch, i) => ({
-          label: '#' + ch, borderColor: CH_COLORS[i % 3], backgroundColor: CH_COLORS[i % 3],
-          tension: .3, pointRadius: 2.5, borderWidth: 2, spanGaps: true,
-          data: dates.map(dt => {
-            const row = hist.find(r => r.date === dt && r.channel === ch);
-            return row ? (row.posts_today || 0) + (row.reactions_total || 0) : null;
-          }),
-        })),
+// 차트는 채널 탭이 처음 열릴 때 그린다 (숨김 탭에서 그리면 폭이 0으로 잡힘)
+export function drawTrendOnce(data) {
+  if (chartDrawn || typeof Chart === 'undefined') return;
+  const hist = data.channel_history || [];
+  if (!hist.length) return;
+  const dates = [...new Set(hist.map(r => r.date))].sort();
+  const channels = [...new Set(hist.map(r => r.channel))];
+  new Chart(document.getElementById('trend'), {
+    type: 'line',
+    data: {
+      labels: dates,
+      datasets: channels.map((ch, i) => ({
+        label: '#' + ch, borderColor: CH_COLORS[i % 3], backgroundColor: CH_COLORS[i % 3],
+        tension: .3, pointRadius: 2.5, borderWidth: 2, spanGaps: true,
+        data: dates.map(dt => {
+          const row = hist.find(r => r.date === dt && r.channel === ch);
+          return row ? (row.posts_today || 0) + (row.reactions_total || 0) : null;
+        }),
+      })),
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 }, color: '#93A3C7' } },
+        title: { display: true, text: '일자별 참여 흐름 (새 글 + 누적 반응)', font: { size: 12 }, color: '#EAF0FC' },
       },
-      options: {
-        responsive: true,
-        plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
-                   title: { display: true, text: '일자별 참여 흐름 (새 글 + 누적 반응)', font: { size: 12 } } },
-        scales: { y: { beginAtZero: true, ticks: { precision: 0 } } },
-      },
-    });
-  }
+      scales: { y: { beginAtZero: true, ticks: { ...AXIS.ticks, precision: 0 }, grid: AXIS.grid }, x: AXIS },
+    },
+  });
+  chartDrawn = true;
 }
 
 function profileCardHTML(m, att, isMine) {
@@ -158,15 +169,81 @@ export function renderMilestones(ms, attendance, data) {
   }).join('');
 }
 
+// ── 홈 탭: 요약 카드 (클릭 시 해당 탭으로 이동) ──
+export function renderHome(data, ms, att) {
+  const held = heldSessions(att.sessions).length;
+  const total = att.program.total_sessions;
+  const doneTracks = ms.tracks.filter(t => t.closing || (data.projects || []).some(p => p.key === t.key && String(p.status).includes('완료'))).length;
+  const hist = data.channel_history || [];
+  const dates = [...new Set(hist.map(r => r.date))].sort();
+  const latest = hist.filter(r => r.date === dates[dates.length - 1]);
+  const posts = latest.reduce((a, c) => a + (c.posts_total || 0), 0);
+  const reactions = latest.reduce((a, c) => a + (c.reactions_total || 0), 0);
+
+  const cards = [
+    { tab: 'milestones', ico: '🚀', title: '프로젝트 마일스톤', num: `${ms.tracks.length}개 트랙`, desc: `진행 상황 투명 공개 · 완료/전환 ${doneTracks}건 포함` },
+    { tab: 'channels', ico: '💬', title: 'AI 채널 활동', num: `글 ${posts} · 반응 ${reactions}`, desc: '3개 채널 참여 흐름, 매일 자동 집계' },
+    { tab: 'stamps', ico: '🏅', title: '참석 도장판', num: `${held}/${total}회차`, desc: `AX 실습 시리즈 · 참석자 ${att.members.length}명의 도장과 뱃지` },
+  ];
+  document.getElementById('home-cards').innerHTML = cards.map(c => `
+    <div class="home-card" data-tab="${c.tab}">
+      <div class="hc-ico">${c.ico}</div>
+      <h3>${esc(c.title)}</h3>
+      <div class="hc-num">${esc(c.num)}</div>
+      <p>${esc(c.desc)}</p>
+    </div>`).join('');
+  document.querySelectorAll('.home-card').forEach(el => el.onclick = () => activateTab(el.dataset.tab));
+}
+
+// ── 우측 레일 ──
+function renderRail(data, att) {
+  const next = att.sessions.find(s => !s.held);
+  const nextTitle = next && !/^\d+회차/.test(next.title) ? `<br />${esc(next.title)}` : '';
+  document.getElementById('rail-next-session').innerHTML = next
+    ? `<b>${next.no}회차</b> · ${next.date ? esc(next.date) : '일정 준비 중'}${nextTitle}`
+    : '전 회차가 마무리되었습니다 🎉';
+
+  const hist = data.channel_history || [];
+  const dates = [...new Set(hist.map(r => r.date))].sort();
+  const latest = hist.filter(r => r.date === dates[dates.length - 1]);
+  document.getElementById('rail-channels').innerHTML = latest.length
+    ? latest.map(c => `<div class="rail-ch"><span>#${esc(c.channel)}</span><b>글 ${c.posts_total ?? 0}</b></div>`).join('')
+    : '데이터 준비 중';
+}
+
+// ── 탭 라우터 ──
+const TITLES = { home: '홈', milestones: 'AX 프로젝트 마일스톤', channels: 'AI 채널 활동', stamps: 'AX 실습 시리즈 — 참석 도장판' };
+let loaded = null; // {data, ms, att}
+
+function activateTab(name) {
+  if (!TITLES[name]) name = 'home';
+  document.querySelectorAll('.tab').forEach(el => el.classList.toggle('active', el.id === 'tab-' + name));
+  document.querySelectorAll('.nav-item').forEach(el => el.classList.toggle('active', el.dataset.tab === name));
+  document.getElementById('page-title').textContent = TITLES[name];
+  if (location.hash !== '#' + name) history.replaceState(null, '', '#' + name);
+  if (name === 'channels' && loaded) drawTrendOnce(loaded.data);
+}
+
+function initTabs() {
+  document.querySelectorAll('.nav-item').forEach(btn => btn.onclick = () => activateTab(btn.dataset.tab));
+  window.addEventListener('hashchange', () => activateTab(location.hash.slice(1)));
+}
+
 async function main() {
+  initTabs();
   const [data, ms, att] = await Promise.all([
     fetchJSON(CONFIG.dataUrl), fetchJSON(CONFIG.milestonesUrl), fetchJSON(CONFIG.attendanceUrl),
   ]);
-  document.getElementById('meta').textContent =
-    '자동 갱신 · 마지막 데이터 수집: ' + new Date(data.generated_at).toLocaleString('ko-KR');
+  loaded = { data, ms, att };
+  const stamp = new Date(data.generated_at).toLocaleString('ko-KR');
+  document.getElementById('meta').textContent = '자동 갱신 · 마지막 데이터 수집: ' + stamp;
+  document.getElementById('side-updated').textContent = stamp;
+  try { renderHome(data, ms, att); } catch (e) { console.error(e); }
   try { renderMilestones(ms, att, data); } catch (e) { console.error(e); }
   try { renderChannels(data); } catch (e) { console.error(e); }
   try { renderAttendance(att, window.localStorage); } catch (e) { console.error(e); }
+  try { renderRail(data, att); } catch (e) { console.error(e); }
+  activateTab(location.hash.slice(1) || 'home');
 }
 main().catch(e => {
   document.getElementById('meta').textContent = '데이터를 불러오지 못했어요. 잠시 후 새로고침해 주세요.';

@@ -4,39 +4,91 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>서울 AI 허브 — AX 여정</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
 <link rel="stylesheet" href="./style.css" />
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <h1>🚀 서울 AI 허브 AX 여정</h1>
-    <p class="tagline">우리 조직의 AI 전환, 지금 어디까지 왔는지 투명하게 공유합니다.</p>
-    <p class="meta" id="meta"></p>
-  </header>
+<div class="layout">
 
-  <section id="sec-milestones">
-    <h2>AX 프로젝트 마일스톤</h2>
-    <div id="tracks"></div>
-  </section>
-
-  <section id="sec-channels">
-    <h2>AI 채널 활동</h2>
-    <div class="grid2">
-      <div class="panel"><canvas id="trend" height="180"></canvas><p class="foot-note" id="trendnote"></p></div>
-      <div class="panel" id="chcards"></div>
+  <!-- 좌측 메뉴 -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">AX</div>
+      <div class="brand-text">
+        <b>서울 AI 허브</b>
+        <span>AX 여정</span>
+      </div>
     </div>
-    <div id="member-participation"></div>
-  </section>
+    <nav class="nav">
+      <button class="nav-item active" data-tab="home"><span class="ico">🏠</span>홈</button>
+      <button class="nav-item" data-tab="milestones"><span class="ico">🚀</span>프로젝트 마일스톤</button>
+      <button class="nav-item" data-tab="channels"><span class="ico">💬</span>AI 채널 활동</button>
+      <button class="nav-item" data-tab="stamps"><span class="ico">🏅</span>참석 도장판</button>
+    </nav>
+    <div class="side-foot">
+      <div class="live-dot"></div>
+      <div>
+        <b>자동 갱신 중</b>
+        <span id="side-updated">—</span>
+      </div>
+    </div>
+  </aside>
 
-  <section id="sec-attendance">
-    <h2>AX 실습 시리즈 — 참석 도장판</h2>
-    <p class="hint">이름을 누르면 도장판과 뱃지가 열립니다. 내 이름을 선택하면 다음부터 내 카드가 맨 위에 고정돼요.</p>
-    <div id="mycard"></div>
-    <div id="members" class="member-list"></div>
-  </section>
+  <!-- 중앙 콘텐츠 -->
+  <div class="main">
+    <header class="topbar">
+      <h1 id="page-title">홈</h1>
+      <span class="meta" id="meta"></span>
+    </header>
 
-  <footer>서울 AI 허브 AX · 문의는 #talk-ax-idea 채널로</footer>
+    <main class="content">
+
+      <section id="tab-home" class="tab active">
+        <div class="hero">
+          <h2>우리 조직의 AI 전환,<br /><em>지금 어디까지 왔는지</em> 투명하게 공유합니다</h2>
+          <p>프로젝트 진행 상황부터 채널 활동, 세션 참석 기록까지 — 모두 자동으로 갱신됩니다.</p>
+        </div>
+        <div class="home-grid" id="home-cards"></div>
+      </section>
+
+      <section id="tab-milestones" class="tab">
+        <div id="tracks"></div>
+      </section>
+
+      <section id="tab-channels" class="tab">
+        <div class="grid2">
+          <div class="panel"><canvas id="trend" height="190"></canvas><p class="foot-note" id="trendnote"></p></div>
+          <div class="panel" id="chcards"></div>
+        </div>
+        <div id="member-participation"></div>
+      </section>
+
+      <section id="tab-stamps" class="tab">
+        <p class="hint">이름을 누르면 도장판과 뱃지가 열립니다. 내 이름을 선택하면 다음부터 내 카드가 맨 위에 고정돼요.</p>
+        <div id="mycard"></div>
+        <div id="members" class="member-list"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- 우측 정보 레일 -->
+  <aside class="rail">
+    <div class="rail-card">
+      <div class="rail-title">다음 세션</div>
+      <div class="rail-body" id="rail-next-session">—</div>
+    </div>
+    <div class="rail-card">
+      <div class="rail-title">오늘의 채널</div>
+      <div class="rail-body" id="rail-channels">—</div>
+    </div>
+    <div class="rail-card">
+      <div class="rail-title">문의·아이디어</div>
+      <div class="rail-body">#talk-ax-idea 채널로<br />자유롭게 남겨주시면 됩니다</div>
+    </div>
+  </aside>
+
 </div>
 <script type="module" src="./app.js"></script>
 </body>
