@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-07-29T17:29:53.058063+09:00",
+  "generated_at": "2026-07-30T12:00:36.742470+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
       "key": "gcb",
       "priority": "High",
       "status": "🟢 진행중",
-      "stage": "파일럿 테스트 (7/30~8/14)",
-      "headline": "전 직원 대상 파일럿 오픈 — 답변 평가 버튼과 주간 요약으로 피드백이 자동으로 모이는 상태에서 실사용 검증 시작",
-      "flow": "피드백 취합 구조 완성 → 슬랙 공지 후 약 10 근무일 파일럿(7/30~8/4, 워크숍 제외, 8/10~8/14)",
-      "watch": "파일럿 사용량·좋아요/아쉬워요 비율·미답변 질문이 매주 월요일 요약으로 도착 / 민감정보 입력 금지 등 보안 수칙 공지 포함 여부",
+      "stage": "파일럿 라이브 (7/30~8/14)",
+      "headline": "전 직원 공지 발송 완료 — 9일간의 파일럿 공식 시작, 실사용자 유입 단계",
+      "flow": "오픈 준비(앱홈 안내페이지·상태표시 통일·테스트 로그 분리) → 공지 발송·파일럿 라이브",
+      "watch": "첫 주 사용량과 좋아요/아쉬워요 비율 / 8/3(월) 아침 첫 주간 요약 자동 도착 여부",
       "purpose": "사내 업무지침을 Slack에서 질의·검수",
       "progress": "VPS 서버에서 24/7 라이브 가동 중. 온보딩 21카드 + 전자서명 가이드 4카드 반영(총 118카드), 재인덱싱 후 신규 질의 7/7 적중·기존 정확도 88% 유지(무회귀). 봇 답변에 자료 바로가기 링크 자동 첨부. 서버 반영 시 재인덱싱 필수(json만 올리면 벡터검색 꺼짐)",
-      "next": "7/30(목) 슬랙 공지·오픈 → 8/3(월) 첫 주간 요약 확인 → 8/14(금) 파일럿 종료 후 회고·정식 운영 판단",
+      "next": "매일 아침 봇 DM '다이제스트'로 현황 확인(심현희) → 8/17(월) 회고에서 성공기준 3종 판정 후 정식 운영 결정",
       "decision": "No",
       "risk": "원문 Anthropic 전송=보안(확장 시), 할루시네이션, 비용",
-      "updated": "260729",
+      "updated": "260730",
       "meeting": "260623 함교수님 미팅",
       "deliverable": "봇(.py) 운영본, bot_guidelines.json(90), 평가셋, 사용로그",
       "page_url": "https://app.notion.com/p/AX-Guide-Check-373341d36ec4808e81f5d39d0dfdb10f",
@@ -1072,6 +1072,39 @@
       "reactions_total": 69,
       "top_emojis": "+1×13, meow_party×8, 오×6",
       "last_text": "클로드 테스트겸 토이 프로젝트로 위젯 하나 만들어봤습니다. To-do list, 메모, 오늘의 운세, 오늘의 영문장 정도로 구성되어 있어요. 시간 날때마다 조금씩 디벨롭해볼까 합니다. 매기에게 많관부~ P.S. 처음…"
+    },
+    {
+      "date": "2026-07-30",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 18,
+      "posts_today": 0,
+      "replies_total": 9,
+      "reactions_total": 130,
+      "top_emojis": "gratitude-gamsahamnida×19, +1×17, 매기필승×16",
+      "last_text": "*[행사공유-리마인드!*:meow_party:*]* _*1. AI Summit Seoul &amp; EXPO 2026*_ :rotating_light: *최종 할인등록 D-4 (~7/31)* • *일시/장소*: *8…"
+    },
+    {
+      "date": "2026-07-30",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 21,
+      "posts_today": 0,
+      "replies_total": 18,
+      "reactions_total": 112,
+      "top_emojis": "매기필승×18, gratitude-gamsahamnida×17, +1×17",
+      "last_text": "다음번엔 꼭 참석 할꼐요~ 갑자기 급한 회의가 생기는 바람에 ㅜㅜㅜㅜ! 노고와 열정에 감사드립니다.화이팅!!!"
+    },
+    {
+      "date": "2026-07-30",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 4,
+      "posts_today": 0,
+      "replies_total": 6,
+      "reactions_total": 69,
+      "top_emojis": "+1×13, meow_party×8, 오×6",
+      "last_text": "클로드 테스트겸 토이 프로젝트로 위젯 하나 만들어봤습니다. To-do list, 메모, 오늘의 운세, 오늘의 영문장 정도로 구성되어 있어요. 시간 날때마다 조금씩 디벨롭해볼까 합니다. 매기에게 많관부~ P.S. 처음…"
     }
   ],
   "project_history": {
@@ -2033,6 +2066,39 @@
           "status": "🟢 진행중",
           "stage": "파일럿 테스트 (7/30~8/14)",
           "updated": "260729"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-07-30": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "파일럿 라이브 (7/30~8/14)",
+          "updated": "260730"
         },
         {
           "name": "[AX] 회계 관리 시스템 연동",
