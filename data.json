@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T17:00:35.475566+09:00",
+  "generated_at": "2026-08-07T12:00:34.289005+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -1356,6 +1356,39 @@
       "reactions_total": 110,
       "top_emojis": "+1×26, gratitude-gamsahamnida×10, 매기필승×8",
       "last_text": "훌륭합니다~~~"
+    },
+    {
+      "date": "2026-08-07",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 18,
+      "posts_today": 0,
+      "replies_total": 6,
+      "reactions_total": 132,
+      "top_emojis": "gratitude-gamsahamnida×20, +1×19, 매기필승×17",
+      "last_text": "*[주말 뉴스 - 현희 PICK~* :meow_party:*]* *1. OpenAI, GPT-5.6 Luna·Terra 가격 인하* 한 줄 요약: OpenAI가 GPT-5.6 라인업 가격을 내리며 가격-성능 경쟁을 …"
+    },
+    {
+      "date": "2026-08-07",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 21,
+      "posts_today": 0,
+      "replies_total": 18,
+      "reactions_total": 112,
+      "top_emojis": "매기필승×18, gratitude-gamsahamnida×17, +1×17",
+      "last_text": "다음번엔 꼭 참석 할꼐요~ 갑자기 급한 회의가 생기는 바람에 ㅜㅜㅜㅜ! 노고와 열정에 감사드립니다.화이팅!!!"
+    },
+    {
+      "date": "2026-08-07",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 7,
+      "posts_today": 0,
+      "replies_total": 11,
+      "reactions_total": 110,
+      "top_emojis": "+1×26, gratitude-gamsahamnida×10, 매기필승×8",
+      "last_text": "훌륭합니다~~~"
     }
   ],
   "project_history": {
@@ -2600,6 +2633,45 @@
       ]
     },
     "2026-08-06": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 2
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "파일럿 라이브 (7/30~8/14)",
+          "updated": "260730"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 전문가활용비 사용내역서 자동 생성",
+          "status": "🟢 사실상 완료",
+          "stage": "실사용 완료 + 팀 배포",
+          "updated": "260731"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-08-07": {
       "counts": {
         "🟢 진행중": 1,
         "🟡 진행중": 2,
