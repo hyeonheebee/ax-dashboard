@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T17:00:52.568090+09:00",
+  "generated_at": "2026-08-11T12:00:43.516499+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -1488,6 +1488,39 @@
       "reactions_total": 110,
       "top_emojis": "+1×26, gratitude-gamsahamnida×10, 매기필승×8",
       "last_text": "훌륭합니다~~~"
+    },
+    {
+      "date": "2026-08-11",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 21,
+      "posts_today": 1,
+      "replies_total": 22,
+      "reactions_total": 140,
+      "top_emojis": "+1×21, gratitude-gamsahamnida×21, 매기필승×17",
+      "last_text": "<https://www.youtube.com/watch?v=CxXgV54KzpQ|youtube.com/watch?v=CxXgV54KzpQ> 출근길에 들으면서 온 제프 딘 인터뷰 내용입니다 엔지니어 관련 내용이 많긴한…"
+    },
+    {
+      "date": "2026-08-11",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 22,
+      "posts_today": 0,
+      "replies_total": 18,
+      "reactions_total": 114,
+      "top_emojis": "+1×18, 매기필승×18, gratitude-gamsahamnida×17",
+      "last_text": "*[Tips] - Claude Code 세션이 서로 연결됩니다* :meow_party: *Claude Code v2.1.224 이상 / macOS · Linux(WSL2 포함)만 지원, 네이티브 Windows는 미지…"
+    },
+    {
+      "date": "2026-08-11",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 7,
+      "posts_today": 0,
+      "replies_total": 11,
+      "reactions_total": 110,
+      "top_emojis": "+1×26, gratitude-gamsahamnida×10, 매기필승×8",
+      "last_text": "훌륭합니다~~~"
     }
   ],
   "project_history": {
@@ -2888,6 +2921,45 @@
       ]
     },
     "2026-08-10": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 2
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "파일럿 라이브 (7/30~8/14)",
+          "updated": "260730"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 전문가활용비 사용내역서 자동 생성",
+          "status": "🟢 사실상 완료",
+          "stage": "실사용 완료 + 팀 배포",
+          "updated": "260731"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        }
+      ]
+    },
+    "2026-08-11": {
       "counts": {
         "🟢 진행중": 1,
         "🟡 진행중": 2,
