@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-12T10:15:38.794529+09:00",
+  "generated_at": "2026-08-12T12:00:38.375311+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -1546,12 +1546,12 @@
       "date": "2026-08-12",
       "channel": "talk-ai-tech-trends",
       "members": 18,
-      "posts_total": 21,
-      "posts_today": 0,
+      "posts_total": 22,
+      "posts_today": 1,
       "replies_total": 22,
-      "reactions_total": 140,
-      "top_emojis": "+1×21, gratitude-gamsahamnida×21, 매기필승×17",
-      "last_text": "<https://www.youtube.com/watch?v=CxXgV54KzpQ|youtube.com/watch?v=CxXgV54KzpQ> 출근길에 들으면서 온 제프 딘 인터뷰 내용입니다 엔지니어 관련 내용이 많긴한…"
+      "reactions_total": 141,
+      "top_emojis": "+1×22, gratitude-gamsahamnida×21, 매기필승×17",
+      "last_text": "<@U0B6YG13DMY> 인터뷰 영상도 ChatGPT로 요약할 수 있나요? 위 요약문 어떻게 만들었나요?"
     },
     {
       "date": "2026-08-12",
