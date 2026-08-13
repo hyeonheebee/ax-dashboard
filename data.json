@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-12T17:00:36.570967+09:00",
+  "generated_at": "2026-08-13T12:00:36.849155+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -106,13 +106,13 @@
       "key": "contractcheck",
       "priority": "High",
       "status": "🟢 진행중",
-      "stage": "사내 오픈 (실사용 중)",
-      "headline": "실제 계약 건 첫 검토 성공 — 법적 효력이 없는 '열람용' 등기부등본을 근거 문구까지 인용해 잡아냄. 다음은 결과 화면을 보기 쉽게 개선",
-      "flow": "주소·보안접속 연결 → 구글 로그인 적용 → 실사용 첫 검토 성공 → 결과 화면 개선 준비(인수인계 완료)",
-      "watch": "개인정보 담당 부서 확인 결과(운영 방식이 여기서 갈림) / 결과 화면이 담당자가 바로 쓸 만한 형태가 되는지",
+      "stage": "구현(라이브 개선)",
+      "headline": "검토 결과가 읽기 쉬운 표와 색 구분으로 나오고, 처리한 항목을 하나씩 체크하며 진행할 수 있게 됨",
+      "flow": "HTTPS 개통·첫 실검토 성공 → 보고서 화면 개선 배포",
+      "watch": "개인정보 담당 확인(보안설계서 제출 대기) — 통과 못 하면 데스크톱 앱 전환",
       "purpose": "계약·협약 서류를 체크리스트와 대조해 누락·오류를 자동 검토",
       "progress": "사내 전용 웹도구로 오픈해 실사용 중. 회사 구글 계정만 로그인 가능하며 외부 계정은 차단됨(확인 완료). 첫 실사용 검토에서 3건 3분 15초, 민감정보는 자동으로 가려 처리했고 법적 효력이 없는 '열람용' 등기부등본을 해당 문구까지 인용해 잡아냄. 기준 문서가 없는 항목은 추측하지 않고 '판별 불가'로 유보하고 필요 서류를 요청. 현재는 결과가 문서 서식 그대로 표시되어 표가 표로 보이지 않음 — 다음 작업으로 화면 개선 착수 예정이며 인수인계 문서와 개발용 미리보기 도구는 준비 완료",
-      "next": "결과 화면 개선(표로 보이게 + 항목별 체크 표시) → 개인정보 담당 확인 요청 → 동료 1~2명 파일럿",
+      "next": "로그인 오류 화면 다듬기 → 동료 1~2명 파일럿",
       "decision": "Yes",
       "risk": "민감정보 포함 문서를 다루므로 개인정보 담당 부서 확인 필요 / 검토 결과는 초안이며 최종 판단은 담당자 책임",
       "updated": "260812",
@@ -1570,6 +1570,39 @@
       "members": 18,
       "posts_total": 8,
       "posts_today": 1,
+      "replies_total": 11,
+      "reactions_total": 113,
+      "top_emojis": "+1×27, gratitude-gamsahamnida×10, 매기필승×8",
+      "last_text": "*[Updated] 관련 피드백 : &lt;<https://seoulaihub.slack.com/archives/C0BCU4JJ2RH/p1786438024559269%7C&lt;&lt;링크&gt;&gt;&gt;*> …"
+    },
+    {
+      "date": "2026-08-13",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 22,
+      "posts_today": 0,
+      "replies_total": 26,
+      "reactions_total": 143,
+      "top_emojis": "+1×22, gratitude-gamsahamnida×21, 매기필승×17",
+      "last_text": "<@U0B6YG13DMY> 인터뷰 영상도 ChatGPT로 요약할 수 있나요? 위 요약문 어떻게 만들었나요?"
+    },
+    {
+      "date": "2026-08-13",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 24,
+      "posts_today": 0,
+      "replies_total": 20,
+      "reactions_total": 120,
+      "top_emojis": "+1×20, 매기필승×20, gratitude-gamsahamnida×18",
+      "last_text": "혹시, 2회차를 듣고 싶은데 아직 도구 만들기가 낯설으시다면? 1회차 영상도 참고해보세요! :meow_party: (참조. <@U0AKB7X7HH8> 센터장님) • *2회차 세션 안내 : &lt;<https://se…"
+    },
+    {
+      "date": "2026-08-13",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 8,
+      "posts_today": 0,
       "replies_total": 11,
       "reactions_total": 113,
       "top_emojis": "+1×27, gratitude-gamsahamnida×10, 매기필승×8",
@@ -3098,6 +3131,51 @@
           "name": "[AX] 계약서류 체크 자동화",
           "status": "🟢 진행중",
           "stage": "사내 오픈 (실사용 중)",
+          "updated": "260812"
+        }
+      ]
+    },
+    "2026-08-13": {
+      "counts": {
+        "🟢 진행중": 2,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 2
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "구현(라이브 검증)",
+          "updated": "260811"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 전문가활용비 사용내역서 자동 생성",
+          "status": "🟢 사실상 완료",
+          "stage": "개인정보 보완 완료 · 팀 배포 대기",
+          "updated": "260811"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 계약서류 체크 자동화",
+          "status": "🟢 진행중",
+          "stage": "구현(라이브 개선)",
           "updated": "260812"
         }
       ]
