@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T17:00:41.952655+09:00",
+  "generated_at": "2026-08-14T12:00:35.030887+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -7,12 +7,12 @@
       "priority": "High",
       "status": "🟢 진행중",
       "stage": "구현(라이브 검증)",
-      "headline": "봇 진입로 2종(메시지·전역 단축어) 라이브 검증 완료 — 초과근무 질의 미탐 1건 발견, 진단 진행",
-      "flow": "단축어 2종 구현·배포 → 심현희 라이브 검증 완료 → 검증 중 발견된 검색 미탐 진단",
-      "watch": "초과근무 검색 미탐 진단 결과와 수정 범위 결정 / 단축어 사용량(via=shortcut·shortcut_global) 추이",
+      "headline": "단축어 2종 라이브 검증 완료 + 초과근무 검색 미탐 당일 수정·배포(검색 정확도 +1pp) — 남은 건 릴리즈 공유",
+      "flow": "단축어 2종 구현·배포 → 라이브 검증 → 검색 미탐 진단 → Tier1+2 수정 배포 완료",
+      "watch": "단축어 실사용량 추이(다음 다이제스트) / eval 정답지 재분류(별도 태스크) / 다른 세션 WIP 리뷰 지적 8건 반영 여부",
       "purpose": "사내 업무지침을 Slack에서 질의·검수",
       "progress": "VPS 서버에서 24/7 라이브 가동 중. 온보딩 21카드 + 전자서명 가이드 4카드 반영(총 118카드), 재인덱싱 후 신규 질의 7/7 적중·기존 정확도 88% 유지(무회귀). 봇 답변에 자료 바로가기 링크 자동 첨부. 서버 반영 시 재인덱싱 필수(json만 올리면 벡터검색 꺼짐)",
-      "next": "진단 보고 확인 → 수정 범위 결정 → 릴리즈 공유(팀장님·슬랙)",
+      "next": "릴리즈 공유(슬랙 공지 게시·핀 완료, general 공지는 월요일 오전 예정 / 팀장님 공유)",
       "decision": "No",
       "risk": "원문 Anthropic 전송=보안(확장 시), 할루시네이션, 비용",
       "updated": "260811",
@@ -1607,6 +1607,39 @@
       "reactions_total": 114,
       "top_emojis": "+1×28, gratitude-gamsahamnida×10, 매기필승×8",
       "last_text": "*[Updated] 관련 피드백 : &lt;<https://seoulaihub.slack.com/archives/C0BCU4JJ2RH/p1786438024559269%7C&lt;&lt;링크&gt;&gt;&gt;*> …"
+    },
+    {
+      "date": "2026-08-14",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 22,
+      "posts_today": 0,
+      "replies_total": 26,
+      "reactions_total": 143,
+      "top_emojis": "+1×22, gratitude-gamsahamnida×21, 매기필승×17",
+      "last_text": "<@U0B6YG13DMY> 인터뷰 영상도 ChatGPT로 요약할 수 있나요? 위 요약문 어떻게 만들었나요?"
+    },
+    {
+      "date": "2026-08-14",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 24,
+      "posts_today": 0,
+      "replies_total": 20,
+      "reactions_total": 121,
+      "top_emojis": "+1×21, 매기필승×20, gratitude-gamsahamnida×18",
+      "last_text": "혹시, 2회차를 듣고 싶은데 아직 도구 만들기가 낯설으시다면? 1회차 영상도 참고해보세요! :meow_party: (참조. <@U0AKB7X7HH8> 센터장님) • *2회차 세션 안내 : &lt;<https://se…"
+    },
+    {
+      "date": "2026-08-14",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 8,
+      "posts_today": 0,
+      "replies_total": 11,
+      "reactions_total": 114,
+      "top_emojis": "+1×28, gratitude-gamsahamnida×10, 매기필승×8",
+      "last_text": "*[Updated] 관련 피드백 : &lt;<https://seoulaihub.slack.com/archives/C0BCU4JJ2RH/p1786438024559269%7C&lt;&lt;링크&gt;&gt;&gt;*> …"
     }
   ],
   "project_history": {
@@ -3136,6 +3169,51 @@
       ]
     },
     "2026-08-13": {
+      "counts": {
+        "🟢 진행중": 2,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 2
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "구현(라이브 검증)",
+          "updated": "260811"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 전문가활용비 사용내역서 자동 생성",
+          "status": "🟢 사실상 완료",
+          "stage": "이번 건 제출서류 완성 · 도구화 계획 수립",
+          "updated": "260813"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 계약서류 체크 자동화",
+          "status": "🟢 진행중",
+          "stage": "구현(라이브 개선)",
+          "updated": "260813"
+        }
+      ]
+    },
+    "2026-08-14": {
       "counts": {
         "🟢 진행중": 2,
         "🟡 진행중": 2,
