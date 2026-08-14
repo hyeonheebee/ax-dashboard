@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T12:00:35.030887+09:00",
+  "generated_at": "2026-08-14T17:00:38.826190+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -1623,12 +1623,12 @@
       "date": "2026-08-14",
       "channel": "talk-ai-tips",
       "members": 18,
-      "posts_total": 24,
-      "posts_today": 0,
-      "replies_total": 20,
-      "reactions_total": 121,
-      "top_emojis": "+1×21, 매기필승×20, gratitude-gamsahamnida×18",
-      "last_text": "혹시, 2회차를 듣고 싶은데 아직 도구 만들기가 낯설으시다면? 1회차 영상도 참고해보세요! :meow_party: (참조. <@U0AKB7X7HH8> 센터장님) • *2회차 세션 안내 : &lt;<https://se…"
+      "posts_total": 26,
+      "posts_today": 2,
+      "replies_total": 23,
+      "reactions_total": 130,
+      "top_emojis": "+1×24, 매기필승×20, gratitude-gamsahamnida×19",
+      "last_text": "[현희's AX 실습 시리즈 - 2회 차 교육 후기] :갓_현희: 1. 어디까지 갔는지 • “자동화 도구를 직접 만들어봤는데, 부족한 점을 파악하고 피봇팅할 방향까지 생각해볼 수 있었습니다.” 2. 알게 된 것 한 …"
     },
     {
       "date": "2026-08-14",
