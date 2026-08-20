@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T17:00:44.624497+09:00",
+  "generated_at": "2026-08-20T12:00:41.410385+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -1797,6 +1797,39 @@
     },
     {
       "date": "2026-08-19",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 8,
+      "posts_today": 0,
+      "replies_total": 11,
+      "reactions_total": 114,
+      "top_emojis": "+1×28, gratitude-gamsahamnida×10, 매기필승×8",
+      "last_text": "*[Updated] 관련 피드백 : &lt;<https://seoulaihub.slack.com/archives/C0BCU4JJ2RH/p1786438024559269%7C&lt;&lt;링크&gt;&gt;&gt;*> …"
+    },
+    {
+      "date": "2026-08-20",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 22,
+      "posts_today": 0,
+      "replies_total": 26,
+      "reactions_total": 143,
+      "top_emojis": "+1×22, gratitude-gamsahamnida×21, 매기필승×17",
+      "last_text": "<@U0B6YG13DMY> 인터뷰 영상도 ChatGPT로 요약할 수 있나요? 위 요약문 어떻게 만들었나요?"
+    },
+    {
+      "date": "2026-08-20",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 28,
+      "posts_today": 0,
+      "replies_total": 31,
+      "reactions_total": 144,
+      "top_emojis": "+1×27, 매기필승×22, gratitude-gamsahamnida×20",
+      "last_text": "지난주 2회차 AX 세션에 참가해주신 모든 분들 감사합니다! 두차례의 세션으로 임직원분들께서 다양한 자동화를 만들어주셨는데요 저도 점차 발전하시는 모습에 놀라기도하고 감사하기도 했습니다 :meow_blush: 이 시…"
+    },
+    {
+      "date": "2026-08-20",
       "channel": "talk-ax-idea",
       "members": 18,
       "posts_total": 8,
@@ -3606,6 +3639,52 @@
       ]
     },
     "2026-08-19": {
+      "counts": {
+        "🟢 진행중": 2,
+        "🟡 진행중": 2,
+        "🟡 검수 완료·배포 대기": 1,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "파일럿 종료 — 관찰 연장(공지 효과 2주)",
+          "updated": "260818"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 전문가활용비 사용내역서 자동 생성",
+          "status": "🟡 검수 완료·배포 대기",
+          "stage": "2.3.1 독립 검수 32건 전건 조치·리포 반영 완료",
+          "updated": "260818"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 계약서류 체크 자동화",
+          "status": "🟢 진행중",
+          "stage": "구현(라이브 개선)",
+          "updated": "260813"
+        }
+      ]
+    },
+    "2026-08-20": {
       "counts": {
         "🟢 진행중": 2,
         "🟡 진행중": 2,
