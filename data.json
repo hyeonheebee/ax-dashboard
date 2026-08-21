@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T12:00:40.568980+09:00",
+  "generated_at": "2026-08-21T17:00:38.703719+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -1856,7 +1856,7 @@
       "members": 18,
       "posts_total": 30,
       "posts_today": 0,
-      "replies_total": 39,
+      "replies_total": 62,
       "reactions_total": 149,
       "top_emojis": "+1×28, 매기필승×23, gratitude-gamsahamnida×20",
       "last_text": "*[Tips] - Slack 내장 봇으로 슬랙메시지를 쉽게 찾기* :meow_party: *`메인 서칭 창`* 옆, 혹은 *`에이전트 및 앱`*에서 *Slack 공식 내장 봇 아이콘* :slackbot: 을 찾아, …"
