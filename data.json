@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T17:00:47.142273+09:00",
+  "generated_at": "2026-08-21T12:00:40.568980+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -9,7 +9,7 @@
       "stage": "파일럿 종료 — 관찰 연장(공지 효과 2주)",
       "headline": "파일럿 판정: 품질 달성·참여 미달 → 관찰 연장 결정. 피드백 4건 전부 반영 배포 + 온보딩 링크 12개 복구",
       "flow": "결과 집계·초안 → 심현희 결정 5건 → 스레드 멘션 응답·채널 게시·투표 UX·주차 카드 구현 → 리뷰 10건 반영 → 배포",
-      "watch": "8/24 다이제스트에서 공지 효과·단축어 실사용, 테스트 세션 참가자 성격 확인(사용자 수 3→4명 여부)",
+      "watch": "8/24 다이제스트에서 공지 효과·단축어 실사용 (집계 확정: 22건·고유 사용자 4명·👍 4/4)",
       "purpose": "사내 업무지침을 Slack에서 질의·검수",
       "progress": "VPS 서버에서 24/7 라이브 가동 중. 온보딩 21카드 + 전자서명 가이드 4카드 반영(총 118카드), 재인덱싱 후 신규 질의 7/7 적중·기존 정확도 88% 유지(무회귀). 봇 답변에 자료 바로가기 링크 자동 첨부. 서버 반영 시 재인덱싱 필수(json만 올리면 벡터검색 꺼짐)",
       "next": "1차 보고(확정본) 발송 → 2주 관찰 후 전환 판단, 보류 리팩터링 4건",
@@ -1830,6 +1830,39 @@
     },
     {
       "date": "2026-08-20",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 8,
+      "posts_today": 0,
+      "replies_total": 11,
+      "reactions_total": 114,
+      "top_emojis": "+1×28, gratitude-gamsahamnida×10, 매기필승×8",
+      "last_text": "*[Updated] 관련 피드백 : &lt;<https://seoulaihub.slack.com/archives/C0BCU4JJ2RH/p1786438024559269%7C&lt;&lt;링크&gt;&gt;&gt;*> …"
+    },
+    {
+      "date": "2026-08-21",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 22,
+      "posts_today": 0,
+      "replies_total": 26,
+      "reactions_total": 143,
+      "top_emojis": "+1×22, gratitude-gamsahamnida×21, 매기필승×17",
+      "last_text": "<@U0B6YG13DMY> 인터뷰 영상도 ChatGPT로 요약할 수 있나요? 위 요약문 어떻게 만들었나요?"
+    },
+    {
+      "date": "2026-08-21",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 30,
+      "posts_today": 0,
+      "replies_total": 39,
+      "reactions_total": 149,
+      "top_emojis": "+1×28, 매기필승×23, gratitude-gamsahamnida×20",
+      "last_text": "*[Tips] - Slack 내장 봇으로 슬랙메시지를 쉽게 찾기* :meow_party: *`메인 서칭 창`* 옆, 혹은 *`에이전트 및 앱`*에서 *Slack 공식 내장 봇 아이콘* :slackbot: 을 찾아, …"
+    },
+    {
+      "date": "2026-08-21",
       "channel": "talk-ax-idea",
       "members": 18,
       "posts_total": 8,
@@ -3685,6 +3718,52 @@
       ]
     },
     "2026-08-20": {
+      "counts": {
+        "🟢 진행중": 2,
+        "🟡 진행중": 2,
+        "🟡 검수 완료·배포 대기": 1,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "파일럿 종료 — 관찰 연장(공지 효과 2주)",
+          "updated": "260818"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 전문가활용비 사용내역서 자동 생성",
+          "status": "🟡 검수 완료·배포 대기",
+          "stage": "2.3.1 독립 검수 32건 전건 조치·리포 반영 완료",
+          "updated": "260818"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 계약서류 체크 자동화",
+          "status": "🟢 진행중",
+          "stage": "구현(라이브 개선)",
+          "updated": "260813"
+        }
+      ]
+    },
+    "2026-08-21": {
       "counts": {
         "🟢 진행중": 2,
         "🟡 진행중": 2,
