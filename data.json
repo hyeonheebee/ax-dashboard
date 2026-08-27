@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T17:00:43.082271+09:00",
+  "generated_at": "2026-08-27T12:00:48.527618+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -2028,6 +2028,39 @@
     },
     {
       "date": "2026-08-26",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 8,
+      "posts_today": 0,
+      "replies_total": 12,
+      "reactions_total": 115,
+      "top_emojis": "+1×29, gratitude-gamsahamnida×10, 매기필승×8",
+      "last_text": "*[Updated] 관련 피드백 : &lt;<https://seoulaihub.slack.com/archives/C0BCU4JJ2RH/p1786438024559269%7C&lt;&lt;링크&gt;&gt;&gt;*> …"
+    },
+    {
+      "date": "2026-08-27",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 23,
+      "posts_today": 0,
+      "replies_total": 26,
+      "reactions_total": 153,
+      "top_emojis": "+1×24, gratitude-gamsahamnida×22, 매기필승×17",
+      "last_text": "*[쪼금 늦은 저저번 주말 뉴스 - 현희 PICK~* :meow_party:*]* **모르셨던 분들을 위해!* 뉴스의 코멘트는 <@U0B6YG13DMY> 매니저가 손수 편집합니다 (NOT AI :blob-thinki…"
+    },
+    {
+      "date": "2026-08-27",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 30,
+      "posts_today": 0,
+      "replies_total": 62,
+      "reactions_total": 149,
+      "top_emojis": "+1×28, 매기필승×23, gratitude-gamsahamnida×20",
+      "last_text": "*[Tips] - Slack 내장 봇으로 슬랙메시지를 쉽게 찾기* :meow_party: *`메인 서칭 창`* 옆, 혹은 *`에이전트 및 앱`*에서 *Slack 공식 내장 봇 아이콘* :slackbot: 을 찾아, …"
+    },
+    {
+      "date": "2026-08-27",
       "channel": "talk-ax-idea",
       "members": 18,
       "posts_total": 8,
@@ -4159,6 +4192,53 @@
       ]
     },
     "2026-08-26": {
+      "counts": {
+        "🟡 검토중": 1,
+        "🟡 진행중": 2,
+        "🟡 검수 완료·배포 대기": 1,
+        "🟢 사실상 완료": 1,
+        "🟢 진행중": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟡 검토중",
+          "stage": "관찰 연장(공지 효과 관찰)",
+          "updated": "260826"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 전문가활용비 사용내역서 자동 생성",
+          "status": "🟡 검수 완료·배포 대기",
+          "stage": "보안 조치 완료 — 운영정책 확정 대기",
+          "updated": "260824"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 계약서류 체크 자동화",
+          "status": "🟢 진행중",
+          "stage": "구현(라이브 개선)",
+          "updated": "260813"
+        }
+      ]
+    },
+    "2026-08-27": {
       "counts": {
         "🟡 검토중": 1,
         "🟡 진행중": 2,
