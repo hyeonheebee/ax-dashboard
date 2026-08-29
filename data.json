@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-28T17:00:41.480058+09:00",
+  "generated_at": "2026-08-29T12:00:46.025618+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
       "key": "gcb",
       "priority": "High",
-      "status": "🟢 진행중",
-      "stage": "구현→라이브 배포 완료",
-      "headline": "봇 답변이 인용한 카드를 '관련 카드' 목록으로 제목까지 보여줘, 링크 없던 카드도 식별 가능해짐",
-      "flow": "D1(카드 1장 임시 안내) → D3(모든 카드에 일반화, 라이브 반영)",
-      "watch": "링크 없는 418개 카드의 참조가 이제 신입에게 식별됨. D1 회수 완료. 회계 카드화~D3 묶어 #general 배포공지 발송 완료(260827)",
+      "status": "🟡 진행중",
+      "stage": "구현(feat 브랜치 커밋, 미배포 WIP)",
+      "headline": "참고자료 3장 편입 + 규정·지침 232장에 통합 드라이브 원문 링크 부착 완료(feat 미배포). 동시 세션 git 엉킴 정리 후 재발방지 하드차단 훅까지 도입",
+      "flow": "지침·규정 카드 중심 운영 → 기초지식 3카드 편입 → git 충돌 정리 + 하드차단 훅 → 규정 232장 원문 링크(통합 드라이브) 일괄 부착",
+      "watch": "feat/base-knowledge-links 미배포(WIP). 배포 시 build_index.py 재빌드 필요(신규 3카드분). 규정 링크는 links only라 재인덱싱 불필요. 미부착 항목(연구비 관리지침25.5·예산기준·매뉴얼·구버전)은 드라이브 13종 밖이라 의도적 제외",
       "purpose": "사내 업무지침을 Slack에서 질의·검수",
       "progress": "회계·지출 안내를 별도 네임스페이스로 병합해 코퍼스가 397→440장으로 확대됨. 기존 평가 181문항 플립 0건, 비업무 질문 과답 0/21, 테스트 117건 전부 통과. 벡터 인덱스 드리프트 경보·개인정보 노출경로 수정·임계값 검증까지 반영해 서버 재배포와 실검색 검증 완료.",
-      "next": "서버 롤백백업 3종 며칠 후 정리. 다음 업데이트는 사용자 피드백 기반",
+      "next": "①온보딩 링크 대조 audit(옵션) ②비번 포함 항목(출퇴근/회의실) 링크만·비번제외 처리 ③feat 검증 후 배포 여부 결정 ④원하면 규정 링크를 개별 파일 URL(B)로 업그레이드",
       "decision": "No",
       "risk": "코퍼스와 벡터 인덱스가 따로 움직이면 검색이 조용히 낡을 수 있음 — 지문 경보를 배포했고 신규 카드 평가 커버리지는 추가 필요",
-      "updated": "260827",
+      "updated": "260828",
       "meeting": "260623 함교수님 미팅",
       "deliverable": "봇(.py) 운영본, bot_guidelines.json(90), 평가셋, 사용로그",
       "page_url": "https://app.notion.com/p/AX-Guide-Check-373341d36ec4808e81f5d39d0dfdb10f",
@@ -2094,6 +2094,39 @@
     },
     {
       "date": "2026-08-28",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 10,
+      "posts_today": 0,
+      "replies_total": 12,
+      "reactions_total": 118,
+      "top_emojis": "+1×30, gratitude-gamsahamnida×11, 매기필승×8",
+      "last_text": ":+1:"
+    },
+    {
+      "date": "2026-08-29",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 23,
+      "posts_today": 0,
+      "replies_total": 26,
+      "reactions_total": 153,
+      "top_emojis": "+1×24, gratitude-gamsahamnida×22, 매기필승×17",
+      "last_text": "*[쪼금 늦은 저저번 주말 뉴스 - 현희 PICK~* :meow_party:*]* **모르셨던 분들을 위해!* 뉴스의 코멘트는 <@U0B6YG13DMY> 매니저가 손수 편집합니다 (NOT AI :blob-thinki…"
+    },
+    {
+      "date": "2026-08-29",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 31,
+      "posts_today": 0,
+      "replies_total": 64,
+      "reactions_total": 149,
+      "top_emojis": "+1×28, 매기필승×23, gratitude-gamsahamnida×20",
+      "last_text": "*[Tips] - 나를 RPG 캐릭터로 만드는 AI 프롬프트* (재미 + 동기부여- 잡숴봐요 츄라이츄라이) :meow_party: Claude, Gpt, Gemini~ AI 챗봇이면 어디서나 · *회사 계정/유료 계…"
+    },
+    {
+      "date": "2026-08-29",
       "channel": "talk-ax-idea",
       "members": 18,
       "posts_total": 10,
@@ -4331,6 +4364,52 @@
           "status": "🟢 진행중",
           "stage": "구현→라이브 배포 완료",
           "updated": "260827"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 전문가활용비 사용내역서 자동 생성",
+          "status": "🟡 검수 완료·배포 대기",
+          "stage": "보안 조치 완료 — 운영정책 확정 대기",
+          "updated": "260824"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 계약서류 체크 자동화",
+          "status": "🟢 진행중",
+          "stage": "구현(라이브 개선)",
+          "updated": "260813"
+        }
+      ]
+    },
+    "2026-08-29": {
+      "counts": {
+        "🟡 진행중": 3,
+        "🟡 검수 완료·배포 대기": 1,
+        "🟢 사실상 완료": 1,
+        "🟢 진행중": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟡 진행중",
+          "stage": "구현(feat 브랜치 커밋, 미배포 WIP)",
+          "updated": "260828"
         },
         {
           "name": "[AX] 회계 관리 시스템 연동",
