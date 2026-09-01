@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-31T12:00:50.178484+09:00",
+  "generated_at": "2026-09-01T12:00:39.902263+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
       "key": "gcb",
       "priority": "High",
       "status": "🟢 진행중",
-      "stage": "운영(라이브 배포 완료)",
-      "headline": "기초지식 3카드 + 규정·지침 232장 원문 링크가 운영 서버에 배포·라이브 반영 완료. feat 브랜치 main 머지+push까지 완결",
-      "flow": "260828 feat 브랜치 커밋(미배포 WIP) → 오늘 데이터 정합성 검증 → 노션·링크 실브라우저 확인 → scp 배포+재시작 → 슬랙 실검증 → main 머지+push",
-      "watch": "규정 232장은 아직 통합 드라이브 '폴더' 1개 URL(개별파일 B안 미적용). 원하면 개별 파일 URL 업그레이드 가능. 배포는 scp 방식(서버 git pull 아님)이라 서버 npz는 로컬 검증본을 쌍으로 전송해 드리프트 원천 차단",
+      "stage": "운영(피드백 대응 완료)",
+      "headline": "'겸직규정' 검색 사각지대 원인 규명 → 당일 수정·검증·배포 완료. 규정 카드 전체의 구어체 키워드 보강은 별도 합의 대기",
+      "flow": "실사용 검색 미스 발견 → 3중 원인 진단 → 키워드 보강+불용어+동점처리 수정 → 무회귀 검증 → 운영 배포",
+      "watch": "같은 사각지대(규정 용어 키워드만 있는 카드)가 규정 카드 232장 전반에 잠재 — 전수 보강 여부 결정 필요",
       "purpose": "사내 업무지침을 Slack에서 질의·검수",
       "progress": "회계·지출 안내를 별도 네임스페이스로 병합해 코퍼스가 397→440장으로 확대됨. 기존 평가 181문항 플립 0건, 비업무 질문 과답 0/21, 테스트 117건 전부 통과. 벡터 인덱스 드리프트 경보·개인정보 노출경로 수정·임계값 검증까지 반영해 서버 재배포와 실검색 검증 완료.",
-      "next": "①(선택) 규정 링크 개별 파일 URL(B)로 업그레이드 ②그 외 미결 없음 — 이 기능 라인은 완결",
+      "next": "전수 구어체 키워드 보강 합의안 검토 → 승인 시 배치 작업",
       "decision": "No",
       "risk": "코퍼스와 벡터 인덱스가 따로 움직이면 검색이 조용히 낡을 수 있음 — 지문 경보를 배포했고 신규 카드 평가 커버리지는 추가 필요",
-      "updated": "260831",
+      "updated": "260901",
       "meeting": "260623 함교수님 미팅",
       "deliverable": "봇(.py) 운영본, bot_guidelines.json(90), 평가셋, 사용로그",
       "page_url": "https://app.notion.com/p/AX-Guide-Check-373341d36ec4808e81f5d39d0dfdb10f",
@@ -2173,12 +2173,12 @@
       "date": "2026-08-31",
       "channel": "talk-ai-tech-trends",
       "members": 18,
-      "posts_total": 25,
-      "posts_today": 2,
+      "posts_total": 26,
+      "posts_today": 3,
       "replies_total": 26,
       "reactions_total": 162,
       "top_emojis": "+1×25, gratitude-gamsahamnida×22, 매기필승×18",
-      "last_text": "<@U0B6YG13DMY> 현희님 고맙습니다.!<@U0AQB4B97RP> 우석님~ 저 카페 이번 출장떄 방문해 보아요~스타트업들은 다 방문이 어려울듯요~ㅎㅎㅎ"
+      "last_text": "*[최근 뉴스 - 현희 PICK~* :meow_party:*]* *1. 과기정통부, 전 국민 무료 '모두의 AI' 사업자로 SKT·카카오·KT 선정* *한 줄 요약:* 해외 AI 의존도를 낮추려는 국산 무료 AI 프…"
     },
     {
       "date": "2026-08-31",
@@ -2193,6 +2193,39 @@
     },
     {
       "date": "2026-08-31",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 10,
+      "posts_today": 0,
+      "replies_total": 12,
+      "reactions_total": 118,
+      "top_emojis": "+1×30, gratitude-gamsahamnida×11, 매기필승×8",
+      "last_text": ":+1:"
+    },
+    {
+      "date": "2026-09-01",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 26,
+      "posts_today": 0,
+      "replies_total": 26,
+      "reactions_total": 163,
+      "top_emojis": "+1×25, gratitude-gamsahamnida×22, 매기필승×18",
+      "last_text": "*[최근 뉴스 - 현희 PICK~* :meow_party:*]* *1. 과기정통부, 전 국민 무료 '모두의 AI' 사업자로 SKT·카카오·KT 선정* *한 줄 요약:* 해외 AI 의존도를 낮추려는 국산 무료 AI 프…"
+    },
+    {
+      "date": "2026-09-01",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 31,
+      "posts_today": 0,
+      "replies_total": 64,
+      "reactions_total": 149,
+      "top_emojis": "+1×28, 매기필승×23, gratitude-gamsahamnida×20",
+      "last_text": "*[Tips] - 나를 RPG 캐릭터로 만드는 AI 프롬프트* (재미 + 동기부여- 잡숴봐요 츄라이츄라이) :meow_party: Claude, Gpt, Gemini~ AI 챗봇이면 어디서나 · *회사 계정/유료 계…"
+    },
+    {
+      "date": "2026-09-01",
       "channel": "talk-ax-idea",
       "members": 18,
       "posts_total": 10,
@@ -4568,6 +4601,52 @@
           "status": "🟢 진행중",
           "stage": "운영(라이브 배포 완료)",
           "updated": "260831"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 전문가활용비 사용내역서 자동 생성",
+          "status": "🟡 검수 완료·배포 대기",
+          "stage": "보안 조치 완료 — 운영정책 확정 대기",
+          "updated": "260824"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 계약서류 체크 자동화",
+          "status": "🟢 진행중",
+          "stage": "구현(라이브 개선)",
+          "updated": "260813"
+        }
+      ]
+    },
+    "2026-09-01": {
+      "counts": {
+        "🟢 진행중": 2,
+        "🟡 진행중": 2,
+        "🟡 검수 완료·배포 대기": 1,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "운영(피드백 대응 완료)",
+          "updated": "260901"
         },
         {
           "name": "[AX] 회계 관리 시스템 연동",
