@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T19:42:32.693170+09:00",
+  "generated_at": "2026-09-11T12:00:44.154453+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -2523,6 +2523,39 @@
     },
     {
       "date": "2026-09-10",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 10,
+      "posts_today": 0,
+      "replies_total": 12,
+      "reactions_total": 121,
+      "top_emojis": "+1×31, gratitude-gamsahamnida×11, 매기필승×8",
+      "last_text": ":+1:"
+    },
+    {
+      "date": "2026-09-11",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 34,
+      "posts_today": 0,
+      "replies_total": 31,
+      "reactions_total": 195,
+      "top_emojis": "gratitude-gamsahamnida×28, +1×26, 매기필승×18",
+      "last_text": "ETRI 박찬성 위원님이 GPT-6 astra로 만든 국가AI전략위 1주년 타임라인이라고 합니다 <https://deep-diver.github.io/korea-ai-in-motion/|deep-diver.githu…"
+    },
+    {
+      "date": "2026-09-11",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 37,
+      "posts_today": 0,
+      "replies_total": 82,
+      "reactions_total": 188,
+      "top_emojis": "+1×38, gratitude-gamsahamnida×24, 매기필승×23",
+      "last_text": "*[Tips] Guide Check Bot, 단축어로 쉽게 쓰기* :meow_party: *(데모영상 제공 편)* *나와의 DM에 궁금한 내용을 적어 두고,* 그 메시지에서 *더보기(⋮)* → 앱에 연결 → *\"Gu…"
+    },
+    {
+      "date": "2026-09-11",
       "channel": "talk-ax-idea",
       "members": 18,
       "posts_total": 10,
@@ -5345,6 +5378,52 @@
       ]
     },
     "2026-09-10": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 2,
+        "🟡 검토중": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "#general 수집기 운영 배포 완료 · 데모영상 시리즈 1편(단축어) 렌더",
+          "updated": "260909"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 전문가활용비 사용내역서 자동 생성",
+          "status": "🟢 사실상 완료",
+          "stage": "배포 직전 — 공지 초안·첨부 준비됨, 게시는 사람이",
+          "updated": "260908"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 계약서류 체크 자동화",
+          "status": "🟡 검토중",
+          "stage": "설계 합의 완료 / 규칙서 v0.5.1(서류 3종 제외) / 착수 합의 5줄 승인 대기 / 코드 미착수",
+          "updated": "260909"
+        }
+      ]
+    },
+    "2026-09-11": {
       "counts": {
         "🟢 진행중": 1,
         "🟡 진행중": 2,
