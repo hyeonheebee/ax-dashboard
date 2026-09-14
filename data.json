@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T17:00:50.234584+09:00",
+  "generated_at": "2026-09-14T12:01:01.532461+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -9,10 +9,10 @@
       "stage": "A안 커밋·푸시·서버배포 완료 · 가중치 방식은 검증 후 보류",
       "headline": "'출입기록'이라 물으면 못 찾던 근태 카드를, 사용자 표현 4개를 붙여 찾게 만들었다 — 평가셋 회귀 0, 프로브 7/12→9/12",
       "flow": "제보(260911) → 1차 진단 '코퍼스 공백' → 심현희 후속 제보 '근태기록이라 하니 나왔다' → 재측정으로 1차 결론 정정(용어 불일치) → 구현 보류",
-      "watch": "과답 방어가 생성단(LLM) 한 겹뿐 — 검색단 거절 게이트는 off_topic 19건 중 1건만 잡는다. 벡터 파생 신호 3종 전부 분리력 없음",
+      "watch": "공지수집기 update가 긴 카드를 3줄로 압축하며 정보를 잃는다(ACC2026-020 303→172자, 여비 단가 소실). 매주 도는 경로라 C안보다 우선",
       "purpose": "사내 업무지침을 Slack에서 질의·검수",
       "progress": "회계·지출 안내를 별도 네임스페이스로 병합해 코퍼스가 397→440장으로 확대됨. 기존 평가 181문항 플립 0건, 비업무 질문 과답 0/21, 테스트 117건 전부 통과. 벡터 인덱스 드리프트 경보·개인정보 노출경로 수정·임계값 검증까지 반영해 서버 재배포와 실검색 검증 완료.",
-      "next": "가중치·거절축 모두 폐기 결론. 남은 후보는 C안(마감공지 속 반복 요건 회수)",
+      "next": "C안보다 선행 과제 발견 — 공지수집기 update 경로의 압축 손실(코퍼스 57.8%가 3줄 초과) 처리 방침 결정",
       "decision": "No",
       "risk": "코퍼스와 벡터 인덱스가 따로 움직이면 검색이 조용히 낡을 수 있음 — 지문 경보를 배포했고 신규 카드 평가 커버리지는 추가 필요",
       "updated": "260911",
@@ -2622,6 +2622,39 @@
     },
     {
       "date": "2026-09-13",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 10,
+      "posts_today": 0,
+      "replies_total": 12,
+      "reactions_total": 121,
+      "top_emojis": "+1×31, gratitude-gamsahamnida×11, 매기필승×8",
+      "last_text": ":+1:"
+    },
+    {
+      "date": "2026-09-14",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 35,
+      "posts_today": 0,
+      "replies_total": 31,
+      "reactions_total": 202,
+      "top_emojis": "gratitude-gamsahamnida×31, +1×28, 매기필승×18",
+      "last_text": "Try Everything 2026 참가기업 정리본입니다. 사업운영 참고차 공유드립니다 :slightly_smiling_face: (사업성은 AI 분석본 그대로로, 제가 따로 검수/수정하지 않았습니다)"
+    },
+    {
+      "date": "2026-09-14",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 37,
+      "posts_today": 0,
+      "replies_total": 82,
+      "reactions_total": 188,
+      "top_emojis": "+1×38, gratitude-gamsahamnida×24, 매기필승×23",
+      "last_text": "*[Tips] Guide Check Bot, 단축어로 쉽게 쓰기* :meow_party: *(데모영상 제공 편)* *나와의 DM에 궁금한 내용을 적어 두고,* 그 메시지에서 *더보기(⋮)* → 앱에 연결 → *\"Gu…"
+    },
+    {
+      "date": "2026-09-14",
       "channel": "talk-ax-idea",
       "members": 18,
       "posts_total": 10,
@@ -5581,6 +5614,51 @@
       ]
     },
     "2026-09-13": {
+      "counts": {
+        "🟡 검토중": 2,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 2
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟡 검토중",
+          "stage": "A안 커밋·푸시·서버배포 완료 · 가중치 방식은 검증 후 보류",
+          "updated": "260911"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 전문가활용비 사용내역서 자동 생성",
+          "status": "🟢 사실상 완료",
+          "stage": "배포 직전 — 공지 초안·첨부 준비됨, 게시는 사람이",
+          "updated": "260908"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 계약서류 체크 자동화",
+          "status": "🟡 검토중",
+          "stage": "설계 합의 완료 / 규칙서 v0.5.1(서류 3종 제외) / 착수 합의 5줄 승인 대기 / 코드 미착수",
+          "updated": "260909"
+        }
+      ]
+    },
+    "2026-09-14": {
       "counts": {
         "🟡 검토중": 2,
         "🟡 진행중": 2,
