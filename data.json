@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T17:00:41.782234+09:00",
+  "generated_at": "2026-09-19T12:00:45.699533+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -2787,6 +2787,39 @@
     },
     {
       "date": "2026-09-18",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 10,
+      "posts_today": 0,
+      "replies_total": 12,
+      "reactions_total": 121,
+      "top_emojis": "+1×31, gratitude-gamsahamnida×11, 매기필승×8",
+      "last_text": ":+1:"
+    },
+    {
+      "date": "2026-09-19",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 36,
+      "posts_today": 0,
+      "replies_total": 31,
+      "reactions_total": 202,
+      "top_emojis": "gratitude-gamsahamnida×31, +1×28, 매기필승×18",
+      "last_text": "_*[행사공유]*_:meow_party: AI Week Festa의 일환인 「인공지능주간」 AI 산업 정책 토크쇼를 공유합니다 금일 허브에서도 AI Impact: AI For Good 정책토론회와 해커톤이 있었는데요…"
+    },
+    {
+      "date": "2026-09-19",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 37,
+      "posts_today": 0,
+      "replies_total": 82,
+      "reactions_total": 188,
+      "top_emojis": "+1×38, gratitude-gamsahamnida×24, 매기필승×23",
+      "last_text": "*[Tips] Guide Check Bot, 단축어로 쉽게 쓰기* :meow_party: *(데모영상 제공 편)* *나와의 DM에 궁금한 내용을 적어 두고,* 그 메시지에서 *더보기(⋮)* → 앱에 연결 → *\"Gu…"
+    },
+    {
+      "date": "2026-09-19",
       "channel": "talk-ax-idea",
       "members": 18,
       "posts_total": 10,
@@ -5974,6 +6007,52 @@
       ]
     },
     "2026-09-18": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 3,
+        "🟡 검토중": 1,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "②(프롬프트 v2) 채택 · 전수 회귀 통과 · 배포 진행",
+          "updated": "260918"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 전문가활용비 사용내역서 자동 생성",
+          "status": "🟡 검토중",
+          "stage": "2.3.6 구현·테스트 186 OK·실측 통과·zip 빌드 완료(배포 결정 대기)",
+          "updated": "260918"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 계약서류 체크 자동화",
+          "status": "🟡 진행중",
+          "stage": "1단계 prep/ 골든셋 B 통과 · 성능 B+C 구현(28% 단축) · 설계 결정 3건 대기 · 2단계 review/ 미착수",
+          "updated": "260918"
+        }
+      ]
+    },
+    "2026-09-19": {
       "counts": {
         "🟢 진행중": 1,
         "🟡 진행중": 3,
