@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-09-20T17:00:40.208535+09:00",
+  "generated_at": "2026-09-21T12:00:47.004675+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
       "key": "gcb",
       "priority": "High",
       "status": "🟢 진행중",
-      "stage": "②(프롬프트 v2) 채택 · 전수 회귀 통과 · 배포 진행",
-      "headline": "카드에 답이 있는데 거절하던 「연차 며칠」을 프롬프트 한 줄로 막았고, 그 한 줄을 검증하는 과정에서 '잡음 바닥부터 재라'는 절차를 새로 세웠다",
-      "flow": "심현희 실사용 테스트에서 오거절 발견 → 단 분리 진단으로 검색 무죄·프롬프트 유죄 확정 → ①(검색 순위) 프로토타입으로 기각 → ② v1 전수 회귀 실패(+3) → 원인이 내가 붙인 부정 예시임을 규명 → v2(+1) → 잡음 바닥 0건 확인으로 +1이 실제 변화임을 확정 → 심현희 승인 → 배포",
-      "watch": "SYSTEM_PROMPT는 QA와 검수 모드가 공유하는데 평가셋에 검수모드 문항이 0개다 — 이번 조항이 검수 경로에 미치는 영향은 스모크 1건뿐, 검정력 없음",
+      "stage": "④ 공지 학습 — 첫 반영·배포 완료",
+      "headline": "#general 공지에서 자동으로 골라낸 규칙 5건이 처음으로 봇 카드에 들어갔다(계약서류 간소화·법무검토 절차·결재라인·노트북 대여·복무기안 기준). 자동 초안을 그대로 쓰지 않고 원문과 대조해 오류 5건을 고친 뒤 배포",
+      "flow": "9/14·9/21 월요일 수집기가 서버에 제안서 생성 → 심현희 '공지카드 반영해줘' → 제안서 scp → 원문 대조 검수(연도 오류·항목 누락 정정) → 카드 삽입 → 186문항 순위 전수 비교 하락 0 → 긴 공지 1장은 2장으로 분할 → 코드리뷰 결함 2건 수정 → 커밋 11e063c → 서버 배포·재기동",
+      "watch": "자동 초안 품질: 5건 중 시행일 연도 오류 1·항목 누락 3·지어낸 문장 1이 있었다. 반영은 계속 사람 검수를 거쳐야 하며, 다음 반영 때도 같은 유형이 나오면 분류 프롬프트(effective_date·보존 지시)를 손볼 근거가 된다",
       "purpose": "사내 업무지침을 Slack에서 질의·검수",
-      "progress": "prompts.py SYSTEM_PROMPT에 오거절 차단 조항 1줄 추가. answerable 거절 15→16, off_topic 19/19 불변, 평가셋 밖 연차 축약형 4/4 해소. 잡음 바닥 0건(같은 프롬프트 2회 202문항 전부 동일)에서 측정. 카드 무변경이라 벡터 재빌드 불필요.",
-      "next": "재기동 후 실사용 확인 → 별건 3개(「착수 보고」 검색 실패 · 부분일치 더미 정렬 키 계통 과제 · 평가셋에 오거절·검수모드 축 신설) 범위 결정",
+      "progress": "카드 444→449(갱신 1·신규 5). 평가셋 키워드 순위 하락 0, eval_ab 기준선 동일(80/74/87%), unittest 180 OK, 프로브 28/30(서버 동일). 서버 백업 pre260921 보존",
+      "next": "다음 월요일(9/28) 제안서 검토 → 반영 절차 재수행. 실사용에서 「휴가 사후 신청」·「대여」 계열 질의 응답 관찰 → 260918 미해결 ②(시행일 칸) 범위 결정",
       "decision": "No",
       "risk": "코퍼스와 벡터 인덱스가 따로 움직이면 검색이 조용히 낡을 수 있음 — 지문 경보를 배포했고 신규 카드 평가 커버리지는 추가 필요",
-      "updated": "260918",
+      "updated": "260921",
       "meeting": "260623 함교수님 미팅",
       "deliverable": "봇(.py) 운영본, bot_guidelines.json(90), 평가셋, 사용로그",
       "page_url": "https://app.notion.com/p/AX-Guide-Check-373341d36ec4808e81f5d39d0dfdb10f",
@@ -2853,6 +2853,39 @@
     },
     {
       "date": "2026-09-20",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 10,
+      "posts_today": 0,
+      "replies_total": 12,
+      "reactions_total": 121,
+      "top_emojis": "+1×31, gratitude-gamsahamnida×11, 매기필승×8",
+      "last_text": ":+1:"
+    },
+    {
+      "date": "2026-09-21",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 36,
+      "posts_today": 0,
+      "replies_total": 31,
+      "reactions_total": 202,
+      "top_emojis": "gratitude-gamsahamnida×31, +1×28, 매기필승×18",
+      "last_text": "_*[행사공유]*_:meow_party: AI Week Festa의 일환인 「인공지능주간」 AI 산업 정책 토크쇼를 공유합니다 금일 허브에서도 AI Impact: AI For Good 정책토론회와 해커톤이 있었는데요…"
+    },
+    {
+      "date": "2026-09-21",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 37,
+      "posts_today": 0,
+      "replies_total": 82,
+      "reactions_total": 188,
+      "top_emojis": "+1×38, gratitude-gamsahamnida×24, 매기필승×23",
+      "last_text": "*[Tips] Guide Check Bot, 단축어로 쉽게 쓰기* :meow_party: *(데모영상 제공 편)* *나와의 DM에 궁금한 내용을 적어 두고,* 그 메시지에서 *더보기(⋮)* → 앱에 연결 → *\"Gu…"
+    },
+    {
+      "date": "2026-09-21",
       "channel": "talk-ax-idea",
       "members": 18,
       "posts_total": 10,
@@ -6144,6 +6177,52 @@
           "status": "🟢 진행중",
           "stage": "②(프롬프트 v2) 채택 · 전수 회귀 통과 · 배포 진행",
           "updated": "260918"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 전문가활용비 사용내역서 자동 생성",
+          "status": "🟡 검토중",
+          "stage": "2.3.6 빌드 · 팀배포 정리 · 시연 배포본·재료를 섞인 파일 1개로 교체하고 전 과정 통과 · 영상 2편 재작성 대기(인계 240)",
+          "updated": "260919"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 계약서류 체크 자동화",
+          "status": "🟡 진행중",
+          "stage": "1단계 prep/ 골든셋 B 통과 · 성능 B+C 구현(28% 단축) · 설계 결정 3건 대기 · 2단계 review/ 미착수",
+          "updated": "260918"
+        }
+      ]
+    },
+    "2026-09-21": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 3,
+        "🟡 검토중": 1,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "④ 공지 학습 — 첫 반영·배포 완료",
+          "updated": "260921"
         },
         {
           "name": "[AX] 회계 관리 시스템 연동",
