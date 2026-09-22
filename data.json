@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T17:00:41.296727+09:00",
+  "generated_at": "2026-09-22T12:00:40.367117+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -2894,6 +2894,39 @@
       "reactions_total": 121,
       "top_emojis": "+1×31, gratitude-gamsahamnida×11, 매기필승×8",
       "last_text": ":+1:"
+    },
+    {
+      "date": "2026-09-22",
+      "channel": "talk-ai-tech-trends",
+      "members": 18,
+      "posts_total": 36,
+      "posts_today": 0,
+      "replies_total": 31,
+      "reactions_total": 202,
+      "top_emojis": "gratitude-gamsahamnida×31, +1×28, 매기필승×18",
+      "last_text": "_*[행사공유]*_:meow_party: AI Week Festa의 일환인 「인공지능주간」 AI 산업 정책 토크쇼를 공유합니다 금일 허브에서도 AI Impact: AI For Good 정책토론회와 해커톤이 있었는데요…"
+    },
+    {
+      "date": "2026-09-22",
+      "channel": "talk-ai-tips",
+      "members": 18,
+      "posts_total": 38,
+      "posts_today": 1,
+      "replies_total": 82,
+      "reactions_total": 188,
+      "top_emojis": "+1×38, gratitude-gamsahamnida×24, 매기필승×23",
+      "last_text": "*[Tips] Guide Check Bot, 이제 공지까지 읽습니다* :meow_party: *(최신 공지 반영 편)* *[Updated] 관련 공지 : &lt;<https://seoulaihub.slack.com/…"
+    },
+    {
+      "date": "2026-09-22",
+      "channel": "talk-ax-idea",
+      "members": 18,
+      "posts_total": 11,
+      "posts_today": 0,
+      "replies_total": 13,
+      "reactions_total": 125,
+      "top_emojis": "+1×31, gratitude-gamsahamnida×12, meow_party×9",
+      "last_text": "<!channel> *[회계 업무 지원 사이트 안내]* :sparkles: 지출서류를 검토하다 보면 검수조서를 작성하려고 *도장을 날인하고 → 사진을 찍고 → 드라이브로 옮기고 → 다시 출력해서 서명*하거나, 용역비…"
     }
   ],
   "project_history": {
@@ -6211,6 +6244,52 @@
       ]
     },
     "2026-09-21": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 3,
+        "🟡 검토중": 1,
+        "🟢 사실상 완료": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "④ 공지 학습 — 첫 반영·배포 완료",
+          "updated": "260921"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 전문가활용비 사용내역서 자동 생성",
+          "status": "🟡 검토중",
+          "stage": "2.3.6 빌드 · 팀배포 정리 · 시연 배포본·재료를 섞인 파일 1개로 교체하고 전 과정 통과 · 영상 2편 재작성 대기(인계 240)",
+          "updated": "260919"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 계약서류 체크 자동화",
+          "status": "🟡 진행중",
+          "stage": "1단계 prep/ 골든셋 B 통과 · 성능 B+C 구현(28% 단축) · 설계 결정 3건 대기 · 2단계 review/ 미착수",
+          "updated": "260918"
+        }
+      ]
+    },
+    "2026-09-22": {
       "counts": {
         "🟢 진행중": 1,
         "🟡 진행중": 3,
