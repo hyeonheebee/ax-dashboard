@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T17:00:38.984955+09:00",
+  "generated_at": "2026-09-26T12:00:50.519292+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -3018,6 +3018,39 @@
     },
     {
       "date": "2026-09-25",
+      "channel": "talk-ax-idea",
+      "members": 19,
+      "posts_total": 11,
+      "posts_today": 0,
+      "replies_total": 13,
+      "reactions_total": 125,
+      "top_emojis": "+1×31, gratitude-gamsahamnida×12, meow_party×9",
+      "last_text": "<!channel> *[회계 업무 지원 사이트 안내]* :sparkles: 지출서류를 검토하다 보면 검수조서를 작성하려고 *도장을 날인하고 → 사진을 찍고 → 드라이브로 옮기고 → 다시 출력해서 서명*하거나, 용역비…"
+    },
+    {
+      "date": "2026-09-26",
+      "channel": "talk-ai-tech-trends",
+      "members": 19,
+      "posts_total": 36,
+      "posts_today": 0,
+      "replies_total": 32,
+      "reactions_total": 202,
+      "top_emojis": "gratitude-gamsahamnida×31, +1×28, 매기필승×18",
+      "last_text": "_*[행사공유]*_:meow_party: AI Week Festa의 일환인 「인공지능주간」 AI 산업 정책 토크쇼를 공유합니다 금일 허브에서도 AI Impact: AI For Good 정책토론회와 해커톤이 있었는데요…"
+    },
+    {
+      "date": "2026-09-26",
+      "channel": "talk-ai-tips",
+      "members": 19,
+      "posts_total": 38,
+      "posts_today": 0,
+      "replies_total": 82,
+      "reactions_total": 188,
+      "top_emojis": "+1×38, gratitude-gamsahamnida×24, 매기필승×23",
+      "last_text": "*[Tips] Guide Check Bot, 이제 공지까지 읽습니다* :meow_party: *(최신 공지 반영 편)* *[Updated] 관련 공지 : &lt;<https://seoulaihub.slack.com/…"
+    },
+    {
+      "date": "2026-09-26",
       "channel": "talk-ax-idea",
       "members": 19,
       "posts_total": 11,
@@ -6528,6 +6561,52 @@
       ]
     },
     "2026-09-25": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 2,
+        "🟠 검수 대기": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "확산 검토 — 팩 교체 구조 판정 완료",
+          "updated": "260924"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 전문가활용비 사용내역서 자동 생성",
+          "status": "🟢 사실상 완료",
+          "stage": "매뉴얼 사이트 공개 · 영상 3편·배포판 zip 최종본",
+          "updated": "260924"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 계약서류 체크 자동화",
+          "status": "🟠 검수 대기",
+          "stage": "A+D+E1 구현·회귀 84건·프로브 · 세트A/B/103쪽 prep+review 재실행(전수 열람 126쪽 노출 0, ⚠️ 0) · 1편 7차(3:02.5) · 2편 1차(2:08.5, 6장면) 제작",
+          "updated": "260923-2"
+        }
+      ]
+    },
+    "2026-09-26": {
       "counts": {
         "🟢 진행중": 1,
         "🟡 진행중": 2,
