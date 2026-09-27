@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T12:01:13.470093+09:00",
+  "generated_at": "2026-09-27T17:00:44.602617+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -66,16 +66,16 @@
       "key": "expertfee",
       "priority": "High",
       "status": "🟢 사실상 완료",
-      "stage": "매뉴얼 사이트 공개 · 영상 3편·배포판 zip 최종본",
-      "headline": "주소 하나(https://seoulaihub-expertfee.duckdns.org)로 매뉴얼·영상 3편·배포판 zip 을 누구나 계정 없이 보고 받을 수 있게 됐습니다",
-      "flow": "원고 완성(260923) → 영상·원고 대조에서 1편 명부 파일 이름 오류 발견 → 영상 먼저 수정·재렌더 → 원고 그대로 HTML → VPS 배포 → 주소로 재생·내려받기 확인",
-      "watch": "슬랙 #general 공지는 아직 미게시 — 첨부 5개 대신 주소 한 줄로 갈지 결정 필요. 일회성경비 엑셀 담당(회계) 확인은 별건으로 남아 있음",
+      "stage": "매뉴얼 사이트 보강 · 맨 위 내려받기와 전체 흐름 한눈에",
+      "headline": "매뉴얼을 열자마자 설치 zip 을 받고, 설치부터 개인정보 정리까지 전체 순서와 봐야 할 영상·절을 한 화면에서 볼 수 있게 됐습니다",
+      "flow": "사이트 공개(260924) → 스샷 7장(260925) → 맨 위 zip + 전체 흐름 절(260927, 글은 기존 원고·영상·공지 문장만)",
+      "watch": "슬랙 공지 게시 여부는 심현희 확인 대기(공지는 주소 한 줄이라 이번 변경으로 고칠 곳 없음)",
       "purpose": "평가위원 정산 서류를 기안서와 제출서류만으로 자동 작성",
       "progress": "기본 오프라인 경로와 외부 API 경로 2곳을 소스 기준으로 확인. 기안 PDF 전송도 신분증·통장과 같이 기본 아니오·외부 전송 경고·로컬 대안 안내를 거치게 수정했고, 개인정보 처리방침 v1.0을 제정. 전송 관문 테스트 14/14와 전체 안전계약 테스트 43/43 통과.",
-      "next": "슬랙 공지 본문에 매뉴얼 주소 넣어 게시(심현희 확인 후)",
+      "next": "공지 게시(심현희) · 필요하면 흐름 절 문구 추가 손질",
       "decision": "No",
       "risk": "민감문서 외부 전송은 예외 승인만 허용해야 하며, 운영 합의와 API 보관정책 확인 전에는 완결로 판정할 수 없음",
-      "updated": "260924",
+      "updated": "260927",
       "meeting": "-",
       "deliverable": "생성 도구 일체, 팀 배포판 2종(Claude·Codex), 설치·사용 안내",
       "page_url": "",
@@ -3070,6 +3070,28 @@
       "reactions_total": 202,
       "top_emojis": "gratitude-gamsahamnida×31, +1×28, 매기필승×18",
       "last_text": "_*[행사공유]*_:meow_party: AI Week Festa의 일환인 「인공지능주간」 AI 산업 정책 토크쇼를 공유합니다 금일 허브에서도 AI Impact: AI For Good 정책토론회와 해커톤이 있었는데요…"
+    },
+    {
+      "date": "2026-09-27",
+      "channel": "talk-ai-tips",
+      "members": 19,
+      "posts_total": 38,
+      "posts_today": 0,
+      "replies_total": 82,
+      "reactions_total": 188,
+      "top_emojis": "+1×38, gratitude-gamsahamnida×24, 매기필승×23",
+      "last_text": "*[Tips] Guide Check Bot, 이제 공지까지 읽습니다* :meow_party: *(최신 공지 반영 편)* *[Updated] 관련 공지 : &lt;<https://seoulaihub.slack.com/…"
+    },
+    {
+      "date": "2026-09-27",
+      "channel": "talk-ax-idea",
+      "members": 19,
+      "posts_total": 11,
+      "posts_today": 0,
+      "replies_total": 13,
+      "reactions_total": 125,
+      "top_emojis": "+1×31, gratitude-gamsahamnida×12, meow_party×9",
+      "last_text": "<!channel> *[회계 업무 지원 사이트 안내]* :sparkles: 지출서류를 검토하다 보면 검수조서를 작성하려고 *도장을 날인하고 → 사진을 찍고 → 드라이브로 옮기고 → 다시 출력해서 서명*하거나, 용역비…"
     }
   ],
   "project_history": {
@@ -6692,8 +6714,8 @@
         {
           "name": "[AX] 전문가활용비 사용내역서 자동 생성",
           "status": "🟢 사실상 완료",
-          "stage": "매뉴얼 사이트 공개 · 영상 3편·배포판 zip 최종본",
-          "updated": "260924"
+          "stage": "매뉴얼 사이트 보강 · 맨 위 내려받기와 전체 흐름 한눈에",
+          "updated": "260927"
         },
         {
           "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
