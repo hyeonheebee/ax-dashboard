@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T12:01:56.349439+09:00",
+  "generated_at": "2026-09-28T17:00:40.200960+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -3108,23 +3108,23 @@
       "date": "2026-09-28",
       "channel": "talk-ai-tips",
       "members": 19,
-      "posts_total": 38,
-      "posts_today": 0,
-      "replies_total": 82,
-      "reactions_total": 188,
-      "top_emojis": "+1×38, gratitude-gamsahamnida×24, 매기필승×23",
-      "last_text": "*[Tips] Guide Check Bot, 이제 공지까지 읽습니다* :meow_party: *(최신 공지 반영 편)* *[Updated] 관련 공지 : &lt;<https://seoulaihub.slack.com/…"
+      "posts_total": 39,
+      "posts_today": 1,
+      "replies_total": 83,
+      "reactions_total": 194,
+      "top_emojis": "+1×40, gratitude-gamsahamnida×24, 매기필승×23",
+      "last_text": "지난 AI for Good 이벤트에서 사용한 다중 타이머:stopwatch:를 공유드립니다! 행사에서 쓸 타이머를 찾아보다가 딱 맞는 게 없어 직접 만들어봤어요. 여러 개의 원형 타이머를 추가해 동시에 사용할 수 있…"
     },
     {
       "date": "2026-09-28",
       "channel": "talk-ax-idea",
       "members": 19,
-      "posts_total": 11,
-      "posts_today": 0,
-      "replies_total": 13,
-      "reactions_total": 125,
-      "top_emojis": "+1×31, gratitude-gamsahamnida×12, meow_party×9",
-      "last_text": "<!channel> *[회계 업무 지원 사이트 안내]* :sparkles: 지출서류를 검토하다 보면 검수조서를 작성하려고 *도장을 날인하고 → 사진을 찍고 → 드라이브로 옮기고 → 다시 출력해서 서명*하거나, 용역비…"
+      "posts_total": 13,
+      "posts_today": 2,
+      "replies_total": 16,
+      "reactions_total": 127,
+      "top_emojis": "+1×31, gratitude-gamsahamnida×13, meow_party×9",
+      "last_text": ":gratitude-gamsahamnida:"
     }
   ],
   "project_history": {
