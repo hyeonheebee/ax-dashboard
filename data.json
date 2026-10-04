@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T17:00:42.329760+09:00",
+  "generated_at": "2026-10-04T12:00:44.682895+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -3282,6 +3282,39 @@
     },
     {
       "date": "2026-10-03",
+      "channel": "talk-ax-idea",
+      "members": 19,
+      "posts_total": 13,
+      "posts_today": 0,
+      "replies_total": 28,
+      "reactions_total": 127,
+      "top_emojis": "+1×31, gratitude-gamsahamnida×13, meow_party×9",
+      "last_text": ":gratitude-gamsahamnida:"
+    },
+    {
+      "date": "2026-10-04",
+      "channel": "talk-ai-tech-trends",
+      "members": 19,
+      "posts_total": 38,
+      "posts_today": 0,
+      "replies_total": 34,
+      "reactions_total": 204,
+      "top_emojis": "gratitude-gamsahamnida×31, +1×28, 매기필승×18",
+      "last_text": "<https://youtu.be/7FS4wbogcrc?si=ixH1MxumWqOc74rn|youtu.be/…?si=…> 심심할때 틀어볼 수 있는 영상입니다 제목은 돈얘기같은데 내용은 AI 스럽습니다. 다 보고나면 디…"
+    },
+    {
+      "date": "2026-10-04",
+      "channel": "talk-ai-tips",
+      "members": 19,
+      "posts_total": 41,
+      "posts_today": 0,
+      "replies_total": 84,
+      "reactions_total": 209,
+      "top_emojis": "+1×42, gratitude-gamsahamnida×25, 매기필승×23",
+      "last_text": "*[소소* :point_right::point_left:*Tips] 노션 AI노트 쓰시나요? 회의록 요약에도 지침을 주자* 저는 노션 :memo:AI노트를 잘 쓰는 편인데요 어제 외부 교육을 들으면서 ai에게 지침의…"
+    },
+    {
+      "date": "2026-10-04",
       "channel": "talk-ax-idea",
       "members": 19,
       "posts_total": 13,
@@ -7160,6 +7193,52 @@
       ]
     },
     "2026-10-03": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 2,
+        "🟢 사실상 완료": 2,
+        "🟠 검수 대기": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "④ 공지 학습 — 매일 수집·누적 대기열 배포 완료",
+          "updated": "261002"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 전문가활용비 사용내역서 자동 생성",
+          "status": "🟢 사실상 완료",
+          "stage": "매뉴얼 사이트 보강 · 맨 위 내려받기와 전체 흐름 한눈에",
+          "updated": "260927"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 계약서류 체크 자동화",
+          "status": "🟠 검수 대기",
+          "stage": "A+D+E1 구현·회귀 84건·프로브 · 세트A/B/103쪽 prep+review 재실행(전수 열람 126쪽 노출 0, ⚠️ 0) · 1편 7차(3:02.5) · 2편 1차(2:08.5, 6장면) 제작",
+          "updated": "260923-2"
+        }
+      ]
+    },
+    "2026-10-04": {
       "counts": {
         "🟢 진행중": 1,
         "🟡 진행중": 2,
