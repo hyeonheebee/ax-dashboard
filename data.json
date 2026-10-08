@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T12:00:35.649804+09:00",
+  "generated_at": "2026-10-08T17:01:20.010469+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -3438,12 +3438,12 @@
       "date": "2026-10-08",
       "channel": "talk-ai-tips",
       "members": 19,
-      "posts_total": 41,
-      "posts_today": 0,
-      "replies_total": 84,
-      "reactions_total": 209,
+      "posts_total": 42,
+      "posts_today": 1,
+      "replies_total": 86,
+      "reactions_total": 213,
       "top_emojis": "+1×42, gratitude-gamsahamnida×25, 매기필승×23",
-      "last_text": "*[소소* :point_right::point_left:*Tips] 노션 AI노트 쓰시나요? 회의록 요약에도 지침을 주자* 저는 노션 :memo:AI노트를 잘 쓰는 편인데요 어제 외부 교육을 들으면서 ai에게 지침의…"
+      "last_text": ":clapper: *행사 스케치 영상 자동 편집 스킬 `makemovie` 공유합니다* 행사영상.. 백개만개 찍어놨는데 어디다가 쓴담? 찍어 놓은 영상을 한 폴더에 모아만 놓으면 Claude가 *스케치 영상*을 만들…"
     },
     {
       "date": "2026-10-08",
