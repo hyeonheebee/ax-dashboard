@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T17:00:36.571964+09:00",
+  "generated_at": "2026-10-10T12:00:39.163187+09:00",
   "projects": [
     {
       "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
@@ -3480,6 +3480,39 @@
     },
     {
       "date": "2026-10-09",
+      "channel": "talk-ax-idea",
+      "members": 19,
+      "posts_total": 13,
+      "posts_today": 0,
+      "replies_total": 28,
+      "reactions_total": 127,
+      "top_emojis": "+1×31, gratitude-gamsahamnida×13, meow_party×9",
+      "last_text": ":gratitude-gamsahamnida:"
+    },
+    {
+      "date": "2026-10-10",
+      "channel": "talk-ai-tech-trends",
+      "members": 19,
+      "posts_total": 39,
+      "posts_today": 0,
+      "replies_total": 34,
+      "reactions_total": 205,
+      "top_emojis": "gratitude-gamsahamnida×31, +1×28, eyes×18",
+      "last_text": "*금일 AI FESTA 26에서 진행된 국가 AI 대상을 공유합니다* :slightly_smiling_face: 다온아이앤씨도 인상깊었는데 상을 타셨네요! *페르소나 에이아이도 상을 탔습니다!* *피지컬 AI, 에이…"
+    },
+    {
+      "date": "2026-10-10",
+      "channel": "talk-ai-tips",
+      "members": 19,
+      "posts_total": 44,
+      "posts_today": 0,
+      "replies_total": 87,
+      "reactions_total": 216,
+      "top_emojis": "+1×43, gratitude-gamsahamnida×26, 매기필승×23",
+      "last_text": ":+1:"
+    },
+    {
+      "date": "2026-10-10",
       "channel": "talk-ax-idea",
       "members": 19,
       "posts_total": 13,
@@ -7634,6 +7667,52 @@
       ]
     },
     "2026-10-09": {
+      "counts": {
+        "🟢 진행중": 1,
+        "🟡 진행중": 3,
+        "🟢 사실상 완료": 1,
+        "🟠 검수 대기": 1
+      },
+      "projects": [
+        {
+          "name": "[AX] Guide Check Bot (지침검수봇/Slack)",
+          "status": "🟢 진행중",
+          "stage": "확산 준비 — 배포본(Kit) 실기기 테스트 통과, 설치 안내서 보완 완료",
+          "updated": "261009"
+        },
+        {
+          "name": "[AX] 회계 관리 시스템 연동",
+          "status": "🟡 진행중",
+          "stage": "재설계안 확정(1.1)",
+          "updated": "260715"
+        },
+        {
+          "name": "[AX] 내부 AI 전환 / 리터러시 증진",
+          "status": "🟡 진행중",
+          "stage": "세션 운영 시작",
+          "updated": "260701"
+        },
+        {
+          "name": "[AX] 전문가활용비 사용내역서 자동 생성",
+          "status": "🟡 진행중",
+          "stage": "2.4.0 빌드·로컬 완주 검증 완료 — 매뉴얼 문장 확인·서버 반영 대기",
+          "updated": "261008"
+        },
+        {
+          "name": "[AX] 교육/행사 입퇴실&만족도 자동화",
+          "status": "🟢 사실상 완료",
+          "stage": "운영 검증 완료",
+          "updated": "260630"
+        },
+        {
+          "name": "[AX] 계약서류 체크 자동화",
+          "status": "🟠 검수 대기",
+          "stage": "A+D+E1 구현·회귀 84건·프로브 · 세트A/B/103쪽 prep+review 재실행(전수 열람 126쪽 노출 0, ⚠️ 0) · 1편 7차(3:02.5) · 2편 1차(2:08.5, 6장면) 제작",
+          "updated": "260923-2"
+        }
+      ]
+    },
+    "2026-10-10": {
       "counts": {
         "🟢 진행중": 1,
         "🟡 진행중": 3,
